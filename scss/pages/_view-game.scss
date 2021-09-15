@@ -1,0 +1,140 @@
+.viewGame {
+  min-height: 80vh;
+  position: relative;
+  background-image: url(../../images/img-07.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.download {
+  display: flex;
+  justify-content: space-between;
+
+  &__keepUp {
+    width: 45%;
+
+    &-heading {
+      font-size: 2rem;
+      letter-spacing: 0.03rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    &-info {
+      font-size: 0.8rem;
+      letter-spacing: 0.03rem;
+      font-weight: bold;
+      opacity: 0.5;
+    }
+
+    &-socials {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 0.5rem;
+      margin-bottom: 2rem;
+
+      .fab {
+        background: $gray-color;
+        padding: 0.7rem;
+        font-size: 1.2rem;
+        border-radius: 50%;
+        margin-right: 1.5rem;
+        color: $white-color;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+          cursor: pointer;
+          color: rgb(175, 136, 136);
+          background-color: $color-secondary;
+        }
+      }
+
+      .facebook {
+        padding: 0.7rem 0.9rem;
+        margin-left: 1rem;
+      }
+    }
+
+    &-support {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+      &--text {
+        font-weight: bold;
+        opacity: 0.7;
+      }
+
+      &--search {
+        margin-left: 1rem;
+        padding: 0.5rem;
+        width: 60%;
+        border-radius: 2rem;
+        outline: none;
+      }
+    }
+  }
+
+  &__platforms {
+    width: 45%;
+
+    &-text {
+      font-weight: bold;
+      opacity: 0.7;
+    }
+
+    &-link {
+      display: flex;
+      gap: 5rem;
+
+      &--apple,
+      &--google {
+        background: #000;
+        display: inline-flex;
+        border-radius: 8px;
+        margin-top: 3rem;
+
+        a {
+          color: white;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+
+          .fab {
+            font-size: 2rem;
+            margin-right: 0.5rem;
+          }
+
+          .texts {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0.3rem;
+
+            p:nth-child(1) {
+              font-size: 0.8rem;
+            }
+
+            p:nth-child(2) {
+              font-size: 1.5rem;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      &--google {
+        .texts {
+          p:nth-child(1) {
+            align-self: flex-start;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.games {
+  min-height: 70vh;
+  position: relative;
+  background-image: url(../../images/img-04.jpg);
+  background-color: rgba(red, 0.47);
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: multiply;
+}
+
+.all-games {
+  margin-top: 2rem;
+  &__title {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+  }
+
+  &__game {
+    &-img {
+      width: 20rem;
+      height: 14rem;
+      border-radius: 8px;
+      transition: all 0.3s ease-in-out;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+      }
+    }
+
+    &-name {
+      text-align: center;
+      margin-top: 0.5rem;
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover &-img {
+      transform: scale(1.05);
+    }
+
+    &:hover &-name {
+      transform: translateY(1rem);
+    }
+  }
+}
+
+// about-allGames Section
+.about-allGames {
+  background-color: rgba($dark-gray, 0.74);
+  margin-top: 2rem;
+  color: $white-color;
+
+  &__title {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  &__sub {
+    line-height: 2rem;
+  }
+}
+
+// about-allGames Section
+.about-featuredGames {
+  background-color: $white-color;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__sub {
+    line-height: 2rem;
+  }
+}
