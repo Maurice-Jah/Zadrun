@@ -1,0 +1,94 @@
+// FOOTEER SECTION
+.footer {
+  background-color: $color-secondary;
+  color: $white-color;
+
+  &__company {
+    &-name {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    &-sub {
+      font-size: 1rem;
+      letter-spacing: 0.04rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__list {
+    border-top: 2px solid rgba($white-color, 0.5);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
+
+    &-link {
+      margin: 1rem 3rem;
+      padding: 0.5rem;
+
+      &:nth-child(1) {
+        margin-left: 0rem;
+      }
+      &--item {
+        text-decoration: none;
+        color: rgba($white-color, 0.5);
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: $white-color;
+          border-bottom: 5px solid $dark-yellow;
+        }
+      }
+    }
+  }
+
+  &-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 5rem;
+
+    &__title {
+      margin-right: 1.5rem;
+      letter-spacing: 0.03rem;
+    }
+
+    &__media {
+      margin-top: 1rem;
+      .fab {
+        display: inline-block;
+        background: $gray-color;
+        padding: 0.7rem;
+        border-radius: 50%;
+        margin-left: 1rem;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+          cursor: pointer;
+          color: red;
+          background-color: $white-color;
+        }
+      }
+
+      &-facebook {
+        .fab {
+          padding: 0.7rem 1rem;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    margin-top: 2.5rem;
+    margin-left: -5rem;
+    margin-right: -5rem;
+    margin-bottom: -3rem;
+    padding: 2.5rem 3rem;
+    background-color: $dark-color;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}

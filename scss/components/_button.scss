@@ -1,0 +1,12 @@
+.btn {
+  outline: none;
+  border: unset;
+  text-transform: uppercase;
+  padding: 1.2rem 1.8rem;
+  border-radius: 8px;
+  background-color: $white-color;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
