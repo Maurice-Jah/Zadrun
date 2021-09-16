@@ -1,0 +1,111 @@
+.company {
+  min-height: 70vh;
+  position: relative;
+  background-image: url(../../images/office.jpg);
+  background-color: rgba($dark-color, 0.8);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: bottom center;
+
+  &-text {
+    color: $white-color;
+    margin-top: 2rem;
+    width: 45%;
+    padding: 5rem;
+    font-weight: bold;
+
+    &__heading {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    &__sub {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__about {
+    text-align: center;
+    background-color: $white-color;
+
+    &-name {
+      margin-bottom: 2rem;
+    }
+
+    &-info {
+      width: 80%;
+      margin: auto;
+      & > * {
+        margin-bottom: 1.5rem;
+        line-height: 2rem;
+      }
+    }
+  }
+
+  //   Leaders
+  &-leaders {
+    &__heading {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 5rem;
+    }
+
+    &__ceo,
+    &__president {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5rem;
+      &-image {
+        width: 30rem;
+        height: 20rem;
+        margin-left: -5rem;
+        &--img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &-profile {
+        width: 60%;
+        &--name {
+          font-size: 2rem;
+          font-family: "Poppins", sans-serif;
+          font-weight: bold;
+          letter-spacing: 0.14rem;
+          color: $dark-red;
+        }
+        &--post {
+          font-family: "Poppins", sans-serif;
+          font-weight: bold;
+          color: $red-color;
+          letter-spacing: 0.14em;
+        }
+        &--about {
+          margin-top: 2rem;
+          line-height: 2rem;
+        }
+
+        a {
+          text-decoration: none;
+          color: rgba($dark-color, 0.7);
+          font-weight: bold;
+          display: inline-block;
+          margin-top: 2rem;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            color: $dark-color;
+          }
+        }
+      }
+    }
+
+    &__president {
+      &-image {
+        width: 25rem;
+        height: 30rem;
+        margin-left: 0rem;
+      }
+    }
+  }
+}

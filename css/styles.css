@@ -663,13 +663,13 @@ h2 {
   .careers__image {
     width: 25rem;
     height: 25rem;
-    background-image: url(../../images/img-04.jpg);
+    background-image: url(../../images/img-10.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat; }
 
 .ethics {
-  border: 2px solid blue; }
+  margin-bottom: 1rem; }
   .ethics__heading {
     font-size: 2rem; }
   .ethics__sub {
@@ -694,3 +694,157 @@ h2 {
       .ethics__photos-image001--img, .ethics__photos-image002--img {
         width: 100%;
         height: 100%; }
+    .ethics__photos-arrows {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      gap: 5rem;
+      margin-top: 2rem; }
+      .ethics__photos-arrows a {
+        display: inline-block;
+        -webkit-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out; }
+        .ethics__photos-arrows a:hover {
+          cursor: pointer;
+          -webkit-transform: translateX(0.5rem);
+              -ms-transform: translateX(0.5rem);
+                  transform: translateX(0.5rem); }
+      .ethics__photos-arrows img {
+        width: 4rem; }
+      .ethics__photos-arrows--right {
+        -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+                transform: rotate(180deg); }
+
+.open-position {
+  background: #fff; }
+  .open-position__heading {
+    margin-bottom: 4rem; }
+  .open-position__vacancy-00, .open-position__vacancy-01 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 3rem; }
+    .open-position__vacancy-00 p:nth-child(1), .open-position__vacancy-01 p:nth-child(1) {
+      font-size: 1.3rem;
+      font-weight: bold;
+      font-family: "Poppins", sans-serif;
+      letter-spacing: 0.05rem;
+      padding-bottom: 0.5rem; }
+    .open-position__vacancy-00 p:nth-child(2), .open-position__vacancy-01 p:nth-child(2) {
+      font-size: 0.9rem;
+      letter-spacing: 0.05rem;
+      padding-bottom: 0.5rem;
+      opacity: 0.65; }
+    .open-position__vacancy-00--apply, .open-position__vacancy-01--apply {
+      background: transparent;
+      border: 3px solid rgba(79, 212, 172, 0.5);
+      border-radius: 50rem;
+      color: #4fd4ac;
+      font-weight: bold;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+      .open-position__vacancy-00--apply:hover, .open-position__vacancy-01--apply:hover {
+        font-weight: bold;
+        -webkit-transform: scale(1.03);
+            -ms-transform: scale(1.03);
+                transform: scale(1.03);
+        border: 3px solid #4fd4ac; }
+
+.company {
+  min-height: 70vh;
+  position: relative;
+  background-image: url(../../images/office.jpg);
+  background-color: rgba(34, 44, 55, 0.8);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: bottom center; }
+  .company-text {
+    color: #fff;
+    margin-top: 2rem;
+    width: 45%;
+    padding: 5rem;
+    font-weight: bold; }
+    .company-text__heading {
+      margin-bottom: 1rem;
+      font-size: 2rem; }
+    .company-text__sub {
+      font-size: 1.3rem; }
+  .company__about {
+    text-align: center;
+    background-color: #fff; }
+    .company__about-name {
+      margin-bottom: 2rem; }
+    .company__about-info {
+      width: 80%;
+      margin: auto; }
+      .company__about-info > * {
+        margin-bottom: 1.5rem;
+        line-height: 2rem; }
+  .company-leaders__heading {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 5rem; }
+  .company-leaders__ceo, .company-leaders__president {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 5rem; }
+    .company-leaders__ceo-image, .company-leaders__president-image {
+      width: 30rem;
+      height: 20rem;
+      margin-left: -5rem; }
+      .company-leaders__ceo-image--img, .company-leaders__president-image--img {
+        width: 100%;
+        height: 100%; }
+    .company-leaders__ceo-profile, .company-leaders__president-profile {
+      width: 60%; }
+      .company-leaders__ceo-profile--name, .company-leaders__president-profile--name {
+        font-size: 2rem;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        letter-spacing: 0.14rem;
+        color: #a03a3a; }
+      .company-leaders__ceo-profile--post, .company-leaders__president-profile--post {
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        color: #ff0000;
+        letter-spacing: 0.14em; }
+      .company-leaders__ceo-profile--about, .company-leaders__president-profile--about {
+        margin-top: 2rem;
+        line-height: 2rem; }
+      .company-leaders__ceo-profile a, .company-leaders__president-profile a {
+        text-decoration: none;
+        color: rgba(34, 44, 55, 0.7);
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 2rem;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; }
+        .company-leaders__ceo-profile a:hover, .company-leaders__president-profile a:hover {
+          color: #222c37; }
+  .company-leaders__president-image {
+    width: 25rem;
+    height: 30rem;
+    margin-left: 0rem; }
