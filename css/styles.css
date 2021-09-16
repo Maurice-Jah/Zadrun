@@ -449,7 +449,8 @@ h2 {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  padding-bottom: 12rem; }
   .download__keepUp {
     width: 45%; }
     .download__keepUp-heading {
@@ -537,8 +538,8 @@ h2 {
                   justify-content: space-between;
           padding-top: 0.5rem;
           padding-bottom: 0.5rem;
-          padding-left: 1.5rem;
-          padding-right: 1.5rem; }
+          padding-left: 1rem;
+          padding-right: 1rem; }
           .download__platforms-link--apple a .fab, .download__platforms-link--google a .fab {
             font-size: 2rem;
             margin-right: 0.5rem; }
@@ -562,3 +563,134 @@ h2 {
       .download__platforms-link--google .texts p:nth-child(1) {
         -ms-flex-item-align: start;
             align-self: flex-start; }
+
+.viewed-game {
+  background-color: #fff;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  position: relative; }
+  .viewed-game__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    top: 0%;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 8px; }
+    .viewed-game__image-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px; }
+  .viewed-game__text {
+    text-align: center; }
+    .viewed-game__text-title {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.2rem;
+      margin-bottom: 1rem; }
+    .viewed-game__text-name {
+      letter-spacing: 0.03rem;
+      font-size: 2rem; }
+    .viewed-game__text-sub {
+      width: 80%;
+      margin: 1rem auto; }
+
+.support {
+  background-color: #fff; }
+  .support__heading {
+    text-align: center; }
+  .support__search {
+    width: 80%;
+    margin: 2rem auto; }
+    .support__search-input {
+      width: 100%;
+      padding: 1rem; }
+
+.support-result {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5rem;
+  padding-bottom: 8rem; }
+  .support-result__game {
+    text-align: center; }
+    .support-result__game-image {
+      width: 15rem;
+      height: 15rem;
+      display: block;
+      margin-bottom: 1rem; }
+      .support-result__game-image--img {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px; }
+    .support-result__game-select {
+      margin-bottom: 1rem; }
+      .support-result__game-select--search {
+        padding: 0.5rem;
+        border-radius: 2rem; }
+        .support-result__game-select--search:focus {
+          outline: none; }
+
+.careers {
+  min-height: 70vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  background-color: #000000; }
+  .careers__text {
+    width: 50%; }
+    .careers__text-main {
+      font-size: 3rem;
+      margin-bottom: 3rem; }
+    .careers__text-sub {
+      font-size: 1.5rem; }
+  .careers__image {
+    width: 25rem;
+    height: 25rem;
+    background-image: url(../../images/img-04.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; }
+
+.ethics {
+  border: 2px solid blue; }
+  .ethics__heading {
+    font-size: 2rem; }
+  .ethics__sub {
+    margin-top: 1rem; }
+  .ethics__photos {
+    margin-top: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 3rem;
+    margin-left: -5rem;
+    margin-right: -5rem; }
+    .ethics__photos-image001, .ethics__photos-image002 {
+      width: 30rem;
+      height: 17rem; }
+      .ethics__photos-image001--img, .ethics__photos-image002--img {
+        width: 100%;
+        height: 100%; }
