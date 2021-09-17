@@ -35,14 +35,36 @@
   </head>
   <body>
     <div class="container">
+      <!-- Small header -->
+      <div class="sidebar">
+        <div class="sidebar__logo">Zadrun</div>
+        <label for="toggle" class="sidebar__click"> </label>
+        <input type="checkbox" class="sidebar__click-checkbox" id="toggle" />
+
+        <ul class="sidebar__list">
+          <li class="sidebar__list-link">
+            <a href="games.html" class="sidebar__list-link--item">GAMES</a>
+          </li>
+          <li class="sidebar__list-link">
+            <a href="company.html" class="sidebar__list-link--item">COMPANY</a>
+          </li>
+          <li class="sidebar__list-link">
+            <a href="careers.html" class="sidebar__list-link--item">CAREERS</a>
+          </li>
+          <li class="sidebar__list-link">
+            <a href="support.html" class="sidebar__list-link--item">SUPPORT</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Ends here -->
       <header class="header">
         <div class="header__logo">Zadrun</div>
-        <nav class="header__list">
+        <ul class="header__list">
           <li class="header__list-link">
             <a href="games.html" class="header__list-link--item">GAMES</a>
           </li>
           <li class="header__list-link">
-            <a href="" class="header__list-link--item">COMPANY</a>
+            <a href="company.html" class="header__list-link--item">COMPANY</a>
           </li>
           <li class="header__list-link">
             <a href="careers.html" class="header__list-link--item">CAREERS</a>
@@ -50,7 +72,7 @@
           <li class="header__list-link">
             <a href="support.html" class="header__list-link--item">SUPPORT</a>
           </li>
-        </nav>
+        </ul>
       </header>
       <section class="hero">
         <div class="hero-center">

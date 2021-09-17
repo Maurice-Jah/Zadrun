@@ -44,6 +44,15 @@ body {
 
 section {
   padding: 3rem 5rem; }
+  @media only screen and (max-width: 37.5em) {
+    section {
+      padding: 3rem 4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    section {
+      padding: 3rem 3rem; } }
+  @media only screen and (max-width: 32em) {
+    section {
+      padding: 3rem 2rem; } }
 
 h1,
 h2 {
@@ -80,9 +89,23 @@ h2 {
         -ms-flex-align: center;
             align-items: center;
     margin-top: 2.5rem; }
+    @media only screen and (max-width: 32em) {
+      .footer__list {
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
     .footer__list-link {
       margin: 1rem 3rem;
       padding: 0.5rem; }
+      @media only screen and (max-width: 56.25em) {
+        .footer__list-link {
+          margin: 1rem 1.5rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .footer__list-link {
+          margin: 0.5rem; } }
+      @media only screen and (max-width: 32em) {
+        .footer__list-link {
+          margin: 0rem; } }
       .footer__list-link:nth-child(1) {
         margin-left: 0rem; }
       .footer__list-link--item {
@@ -92,6 +115,12 @@ h2 {
         -webkit-transition: all 0.3s ease-in-out;
         -o-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out; }
+        @media only screen and (max-width: 37.5em) {
+          .footer__list-link--item {
+            font-size: 0.8rem; } }
+        @media only screen and (max-width: 32em) {
+          .footer__list-link--item {
+            font-size: 0.6rem; } }
         .footer__list-link--item:hover {
           color: #fff;
           border-bottom: 5px solid #ecbd45; }
@@ -110,9 +139,20 @@ h2 {
         -ms-flex-pack: center;
             justify-content: center;
     padding-right: 5rem; }
+    @media only screen and (max-width: 37.5em) {
+      .footer-socials {
+        margin-top: 1rem;
+        padding-right: 0;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
     .footer-socials__title {
       margin-right: 1.5rem;
       letter-spacing: 0.03rem; }
+      @media only screen and (max-width: 37.5em) {
+        .footer-socials__title {
+          margin-right: 0rem;
+          font-size: 1.1rem; } }
     .footer-socials__media {
       margin-top: 1rem; }
       .footer-socials__media .fab {
@@ -124,6 +164,12 @@ h2 {
         -webkit-transition: all 0.4s ease-in-out;
         -o-transition: all 0.4s ease-in-out;
         transition: all 0.4s ease-in-out; }
+        @media only screen and (max-width: 37.5em) {
+          .footer-socials__media .fab {
+            margin: 1rem 2rem; } }
+        @media only screen and (max-width: 32em) {
+          .footer-socials__media .fab {
+            margin: 1rem; } }
         .footer-socials__media .fab:hover {
           cursor: pointer;
           color: red;
@@ -139,6 +185,14 @@ h2 {
     background-color: #222c37;
     text-align: center;
     font-size: 0.8rem; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__copyright {
+        margin-left: -3rem;
+        margin-right: -3rem; } }
+    @media only screen and (max-width: 32em) {
+      .footer__copyright {
+        margin-left: -2rem;
+        margin-right: -2rem; } }
 
 .header {
   background-color: #222c37;
@@ -153,6 +207,9 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media only screen and (max-width: 56.25em) {
+    .header {
+      display: none; } }
   .header__logo {
     height: 5rem;
     width: 5rem;
@@ -178,6 +235,72 @@ h2 {
           color: #fff;
           border-bottom: 5px solid #ecbd45; }
 
+.sidebar {
+  background-color: #9e5757;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 3rem;
+  color: #fff;
+  display: none; }
+  @media only screen and (max-width: 56.25em) {
+    .sidebar {
+      display: block; } }
+  .sidebar__click {
+    width: 2rem;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    right: 3rem;
+    top: 1.5rem;
+    z-index: 400; }
+    .sidebar__click:hover {
+      cursor: pointer; }
+    .sidebar__click::before, .sidebar__click::after {
+      content: "";
+      position: absolute;
+      width: 2rem;
+      height: 2px;
+      background-color: black;
+      z-index: 400; }
+    .sidebar__click::before {
+      top: 0.7rem; }
+    .sidebar__click::after {
+      bottom: 0.7rem; }
+    .sidebar__click-checkbox {
+      display: none; }
+  #toggle:checked ~ .sidebar__list {
+    visibility: visible;
+    opacity: 1;
+    width: 50vw; }
+  .sidebar__list {
+    position: fixed;
+    z-index: 300;
+    right: 0rem;
+    top: 0rem;
+    list-style: none;
+    min-height: 70vh;
+    padding-top: 2rem;
+    background-color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    -webkit-transition: width 0.5s ease-in-out;
+    -o-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out; }
+    .sidebar__list-link {
+      margin: 3rem 1rem; }
+      .sidebar__list-link--item {
+        text-decoration: none;
+        color: #222c37;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.2rem;
+        font-weight: bold; }
+
 .hero {
   min-height: 70vh;
   position: relative;
@@ -199,6 +322,9 @@ h2 {
     font-weight: 700; }
   .hero__title {
     font-size: 3rem; }
+    @media only screen and (max-width: 56.25em) {
+      .hero__title {
+        font-size: 2rem; } }
   .hero__viewBtn {
     margin-top: 2rem;
     font-weight: bold;
@@ -208,6 +334,10 @@ h2 {
     -o-transition: transform 0.3s ease-in;
     transition: transform 0.3s ease-in;
     transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in; }
+    @media only screen and (max-width: 37.5em) {
+      .hero__viewBtn {
+        font-size: 1rem;
+        padding: 1rem; } }
     .hero__viewBtn:hover {
       background-color: #ecbd45;
       color: #fff;
@@ -252,6 +382,9 @@ h2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 2rem; }
+    @media only screen and (max-width: 32em) {
+      .featured-games__games {
+        grid-template-columns: 1fr; } }
     .featured-games__games-Box {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -270,6 +403,10 @@ h2 {
             -ms-transform: rotate(330deg);
                 transform: rotate(330deg);
         margin-top: -5rem; }
+        @media only screen and (max-width: 32em) {
+          .featured-games__games-Box--image {
+            width: 10rem;
+            min-height: 15rem; } }
         .featured-games__games-Box--image .game-image {
           width: 100%;
           height: 100%; }
@@ -282,6 +419,9 @@ h2 {
               align-items: flex-end;
       margin-right: 2rem;
       margin-bottom: 2rem; }
+      @media only screen and (max-width: 37.5em) {
+        .featured-games__games-viewMore {
+          display: none; } }
       .featured-games__games-viewMore--text {
         color: rgba(34, 44, 55, 0.8);
         display: -webkit-box;
@@ -312,6 +452,12 @@ h2 {
       padding: 3rem;
       text-align: center;
       background: #fff; }
+      @media only screen and (max-width: 37.5em) {
+        .featured-games__games-description {
+          display: none; } }
+      @media only screen and (max-width: 32em) {
+        .featured-games__games-description {
+          padding: 1rem; } }
       .featured-games__games-description--main {
         font-size: 2rem;
         margin-bottom: 0.5rem; }
@@ -350,6 +496,9 @@ h2 {
     -webkit-transition: all 0.3s ease-in;
     -o-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in; }
+    @media only screen and (max-width: 32em) {
+      .featured-games__btn {
+        padding: 1rem; } }
     .featured-games__btn:hover {
       background-color: #ecbd45;
       color: #fff; }
@@ -365,6 +514,13 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     text-align: center; }
+    @media only screen and (max-width: 56.25em) {
+      .about__text-sub {
+        max-width: 100%;
+        text-align: justify;
+        -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+                hyphens: auto; } }
 
 .games {
   min-height: 70vh;

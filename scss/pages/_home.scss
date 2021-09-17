@@ -17,6 +17,10 @@
 
   &__title {
     font-size: 3rem;
+
+    @include respond(tab-land) {
+      font-size: 2rem;
+    }
   }
 
   &__viewBtn {
@@ -25,6 +29,10 @@
     font-size: 1.2rem;
     transition: transform 0.3s ease-in;
 
+    @include respond(phone) {
+      font-size: 1rem;
+      padding: 1rem;
+    }
     &:hover {
       background-color: $dark-yellow;
       color: $white-color;
@@ -84,6 +92,10 @@
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 2rem;
 
+    @include respond(sm-phone) {
+      grid-template-columns: 1fr;
+    }
+
     &-Box {
       display: flex;
       justify-content: space-between;
@@ -97,6 +109,11 @@
         transform: rotate(330deg);
         margin-top: -5rem;
 
+        @include respond(sm-phone) {
+          width: 10rem;
+          min-height: 15rem;
+        }
+
         .game-image {
           width: 100%;
           height: 100%;
@@ -109,6 +126,10 @@
       align-items: flex-end;
       margin-right: 2rem;
       margin-bottom: 2rem;
+
+      @include respond(phone) {
+        display: none;
+      }
 
       &--text {
         color: rgba($dark-color, 0.8);
@@ -138,6 +159,14 @@
       padding: 3rem;
       text-align: center;
       background: $white-color;
+
+      @include respond(phone) {
+        display: none;
+      }
+
+      @include respond(sm-phone) {
+        padding: 1rem;
+      }
 
       &--main {
         font-size: 2rem;
@@ -185,6 +214,10 @@
     color: $white-color;
     transition: all 0.3s ease-in;
 
+    @include respond(sm-phone) {
+      padding: 1rem;
+    }
+
     &:hover {
       background-color: $dark-yellow;
       color: $white-color;
@@ -208,6 +241,12 @@
       margin-left: auto;
       margin-right: auto;
       text-align: center;
+
+      @include respond(tab-land) {
+        max-width: 100%;
+        text-align: justify;
+        hyphens: auto;
+      }
     }
   }
 }
