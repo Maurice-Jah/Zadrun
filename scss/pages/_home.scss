@@ -1,11 +1,30 @@
 .hero {
   min-height: 70vh;
   position: relative;
-  background-image: url(../../images/img-01.jpg);
-  background-color: rgba(red, 0.47);
+  // background-image: url(../../images/img-01.jpg);
+  // background-color: rgba(red, 0.47);
   background-size: cover;
   background-position: center center;
   background-blend-mode: multiply;
+
+  .mySlides {
+    position: absolute;
+    min-height: 70vh;
+    width: 100%;
+    top: 0;
+    background-color: rgba(red, 0.47);
+    left: 0;
+    display: none;
+
+    &-img {
+      height: 70vh;
+      object-fit: cover;
+      width: 100%;
+      display: block;
+      filter: brightness(40%);
+      mix-blend-mode: multiply;
+    }
+  }
 
   &-center {
     @include absCenter;
@@ -56,10 +75,10 @@
 
       &:hover {
         cursor: pointer;
+        background-color: $dark-yellow;
       }
     }
-
-    &-01 {
+    .active {
       background-color: $dark-yellow;
     }
   }

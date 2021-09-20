@@ -75,170 +75,201 @@
         </ul>
       </header>
       <section class="hero">
+        <div class="mySlides fade">
+          <img src="images/img-01.jpg" class="mySlides-img" />
+        </div>
+
+        <!-- 2nd -->
+        <div class="mySlides fade">
+          <img src="images/bg.jpg" class="mySlides-img" />
+        </div>
+
+        <!-- 2nd -->
+        <div class="mySlides fade">
+          <img src="images/img-07.jpg" class="mySlides-img" />
+        </div>
+
         <div class="hero-center">
           <h1 class="hero__title">Ride Not Solo</h1>
           <p class="hero__sub">Challenge your friend’s intellect</p>
           <button class="hero__viewBtn btn">View Game</button>
         </div>
         <div class="hero__pagination">
-          <span class="hero__pagination-00"></span>
-          <span class="hero__pagination-01"></span>
-          <span class="hero__pagination-03"></span>
+          <span
+            class="hero__pagination-00 dot"
+            onclick="currentSlide(1)"
+            id="btn-1"
+          ></span>
+          <span
+            class="hero__pagination-01 dot"
+            onclick="currentSlide(2)"
+            id="btn-2"
+          ></span>
+          <span
+            class="hero__pagination-02 dot"
+            onclick="currentSlide(3)"
+            id="btn-3"
+          ></span>
         </div>
       </section>
-      <section class="featured-games">
-        <div class="featured-games__text">
-          <p class="featured-games__text-sub">ZADRUN LATEST</p>
-          <h1 class="featured-games__text-main">Featured Games</h1>
-        </div>
 
-        <div class="featured-games__games">
-          <div class="featured-games__games-Box">
-            <div class="featured-games__games-Box--image">
-              <img
-                src="images/img-02.svg"
-                alt="game-image"
-                class="game-image"
-              />
-            </div>
+      <div class="bg">
+        <section class="featured-games">
+          <div class="featured-games__text">
+            <p class="featured-games__text-sub">ZADRUN LATEST</p>
+            <h1 class="featured-games__text-main">Featured Games</h1>
+          </div>
 
-            <div class="featured-games__games-viewMore">
-              <div class="featured-games__games-viewMore--text">
-                View More
-                <span class="arrow">
-                  <img src="images/arrow-right.svg" alt="arrow"
-                /></span>
+          <div class="featured-games__games">
+            <div class="featured-games__games-Box">
+              <div class="featured-games__games-Box--image">
+                <img
+                  src="images/img-02.svg"
+                  alt="game-image"
+                  class="game-image"
+                />
+              </div>
+
+              <div class="featured-games__games-viewMore">
+                <div class="featured-games__games-viewMore--text">
+                  View More
+                  <span class="arrow">
+                    <img src="images/arrow-right.svg" alt="arrow"
+                  /></span>
+                </div>
               </div>
             </div>
+            <div class="featured-games__games-description">
+              <h1 class="featured-games__games-description--main">Dice Card</h1>
+              <h2 class="featured-games__games-description--sub">
+                You Can always play to win
+              </h2>
+              <p class="featured-games__games-description--text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor
+                sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet,
+                consectetur adip
+              </p>
+            </div>
+
+            <!-- 2nd game -->
+            <div class="featured-games__games-description second-game">
+              <h1 class="featured-games__games-description--main">
+                Football Game
+              </h1>
+              <h2 class="featured-games__games-description--sub">
+                Get ready to get your skills tested
+              </h2>
+              <p class="featured-games__games-description--text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor
+                sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet,
+                consectetur adip
+              </p>
+            </div>
+
+            <div class="featured-games__games-Box second-game">
+              <div class="featured-games__games-Box--image box-2">
+                <img
+                  src="images/img-03.png"
+                  alt="game-image"
+                  class="game-image"
+                />
+              </div>
+
+              <div class="featured-games__games-viewMore">
+                <div
+                  class="featured-games__games-viewMore--text second-game--text"
+                >
+                  View More
+                  <span class="arrow">
+                    <img src="images/arrow-right.svg" alt="arrow"
+                  /></span>
+                </div>
+              </div>
+            </div>
+
+            <button class="featured-games__btn btn">Our Games</button>
           </div>
-          <div class="featured-games__games-description">
-            <h1 class="featured-games__games-description--main">Dice Card</h1>
-            <h2 class="featured-games__games-description--sub">
-              You Can always play to win
-            </h2>
-            <p class="featured-games__games-description--text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit.Lorem ipsum dolor sit amet,
-              consectetur adip
+        </section>
+        <section class="about">
+          <div class="about__text">
+            <h1 class="about__text-main">ZADRUN</h1>
+            <p class="about__text-sub">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla
+              faucibus ac ornare mauris. Pretium molestie eget ut quis. Nisl
+              auctor sed ultrices venenatis elementum. Tincidunt ultrices vel
+              fames donec quis. Tempor tortor adipiscing eget ut integer
+              lobortis. Sit phasellus mauris ac bibendum. Quisque arcu malesuada
+              magna blandit elit tristique. Laoreet euismod massa habitasse enim
+              nibh vitae at.
+            </p>
+            <p class="about__text-sub">
+              Viverra vitae vel vitae commodo nullam. Enim, ultrices netus
+              adipiscing eu. Est amet tristique turpis ut volutpat tempus quis
+              eros fermentum. Pulvinar eget velit adipiscing diam aliquam
+              pharetra eu elementum pellentesque. Viverra tincidunt volutpat
+              suspendisse consectetur amet, ut id augue. Ultrices sit non
+              pulvinar mattis risus euismod at nisi. Sed sed lectus ut sit
+              scelerisque magna a condimentum nulla. Rhoncus amet, viverra amet
+              nunc, sed phasellus. Convallis felis volutpat neque scelerisque
+              massa ut faucibus eu, adipiscing. Orci nec sit viverra nullam
+              fermentum enim. Vitae aliquet facilisis eu iaculis.
+            </p>
+          </div>
+        </section>
+
+        <!-- ------------Footer Section------------------------------- -->
+        <section class="footer">
+          <div class="footer__company">
+            <h1 class="footer__company-name">ZADRUN</h1>
+            <p class="footer__company-sub">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla
+              faucibus ac ornare mauris. Pretium molestie eget ut quis. Nisl
+              auctor sed ultrices venenatis elementum. Tincidunt ultrices vel
+              fames
             </p>
           </div>
 
-          <!-- 2nd game -->
-          <div class="featured-games__games-description second-game">
-            <h1 class="featured-games__games-description--main">
-              Football Game
-            </h1>
-            <h2 class="featured-games__games-description--sub">
-              Get ready to get your skills tested
-            </h2>
-            <p class="featured-games__games-description--text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit.Lorem ipsum dolor sit amet,
-              consectetur adip
-            </p>
-          </div>
+          <ul class="footer__list">
+            <li class="footer__list-link">
+              <a href="support.html" class="footer__list-link--item">SUPPORT</a>
+            </li>
+            <li class="footer__list-link">
+              <a href="" class="footer__list-link--item">CONTACT</a>
+            </li>
+            <li class="footer__list-link">
+              <a href="" class="footer__list-link--item">GAMES</a>
+            </li>
+            <li class="footer__list-link">
+              <a href="" class="footer__list-link--item">CAREERS</a>
+            </li>
+          </ul>
 
-          <div class="featured-games__games-Box second-game">
-            <div class="featured-games__games-Box--image box-2">
-              <img
-                src="images/img-03.png"
-                alt="game-image"
-                class="game-image"
-              />
-            </div>
-
-            <div class="featured-games__games-viewMore">
-              <div
-                class="featured-games__games-viewMore--text second-game--text"
-              >
-                View More
-                <span class="arrow">
-                  <img src="images/arrow-right.svg" alt="arrow"
-                /></span>
-              </div>
+          <div class="footer-socials">
+            <h1 class="footer-socials__title">Follow us</h1>
+            <div class="footer-socials__media">
+              <span class="footer-socials__media-facebook">
+                <i class="fab fa-facebook-f"></i
+              ></span>
+              <span class="footer-socials__media-twitter">
+                <i class="fab fa-twitter"></i
+              ></span>
+              <span class="footer-socials__media-instagram">
+                <i class="fab fa-instagram"></i
+              ></span>
             </div>
           </div>
 
-          <button class="featured-games__btn btn">Our Games</button>
-        </div>
-      </section>
-      <section class="about">
-        <div class="about__text">
-          <h1 class="about__text-main">ZADRUN</h1>
-          <p class="about__text-sub">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla
-            faucibus ac ornare mauris. Pretium molestie eget ut quis. Nisl
-            auctor sed ultrices venenatis elementum. Tincidunt ultrices vel
-            fames donec quis. Tempor tortor adipiscing eget ut integer lobortis.
-            Sit phasellus mauris ac bibendum. Quisque arcu malesuada magna
-            blandit elit tristique. Laoreet euismod massa habitasse enim nibh
-            vitae at.
-          </p>
-          <p class="about__text-sub">
-            Viverra vitae vel vitae commodo nullam. Enim, ultrices netus
-            adipiscing eu. Est amet tristique turpis ut volutpat tempus quis
-            eros fermentum. Pulvinar eget velit adipiscing diam aliquam pharetra
-            eu elementum pellentesque. Viverra tincidunt volutpat suspendisse
-            consectetur amet, ut id augue. Ultrices sit non pulvinar mattis
-            risus euismod at nisi. Sed sed lectus ut sit scelerisque magna a
-            condimentum nulla. Rhoncus amet, viverra amet nunc, sed phasellus.
-            Convallis felis volutpat neque scelerisque massa ut faucibus eu,
-            adipiscing. Orci nec sit viverra nullam fermentum enim. Vitae
-            aliquet facilisis eu iaculis.
-          </p>
-        </div>
-      </section>
-
-      <!-- ------------Footer Section------------------------------- -->
-      <section class="footer">
-        <div class="footer__company">
-          <h1 class="footer__company-name">ZADRUN</h1>
-          <p class="footer__company-sub">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla
-            faucibus ac ornare mauris. Pretium molestie eget ut quis. Nisl
-            auctor sed ultrices venenatis elementum. Tincidunt ultrices vel
-            fames
-          </p>
-        </div>
-
-        <ul class="footer__list">
-          <li class="footer__list-link">
-            <a href="support.html" class="footer__list-link--item">SUPPORT</a>
-          </li>
-          <li class="footer__list-link">
-            <a href="" class="footer__list-link--item">CONTACT</a>
-          </li>
-          <li class="footer__list-link">
-            <a href="" class="footer__list-link--item">GAMES</a>
-          </li>
-          <li class="footer__list-link">
-            <a href="" class="footer__list-link--item">CAREERS</a>
-          </li>
-        </ul>
-
-        <div class="footer-socials">
-          <h1 class="footer-socials__title">Follow us</h1>
-          <div class="footer-socials__media">
-            <span class="footer-socials__media-facebook">
-              <i class="fab fa-facebook-f"></i
-            ></span>
-            <span class="footer-socials__media-twitter">
-              <i class="fab fa-twitter"></i
-            ></span>
-            <span class="footer-socials__media-instagram">
-              <i class="fab fa-instagram"></i
-            ></span>
-          </div>
-        </div>
-
-        <p class="footer__copyright">©2021 ZADRUN INC. ALL RIGHTS RESERVED</p>
-      </section>
+          <p class="footer__copyright">©2021 ZADRUN INC. ALL RIGHTS RESERVED</p>
+        </section>
+      </di>
     </div>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

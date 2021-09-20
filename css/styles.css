@@ -17,6 +17,16 @@ $breakpoints
 -big-desktop
 
 */
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 5s;
+  animation-name: fade;
+  animation-duration: 5s;
+  -webkit-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out; }
+
 *,
 *::before,
 *::after {
@@ -36,11 +46,16 @@ body {
   font-family: "Roboto", sans-serif; }
 
 .container {
+  position: relative; }
+
+.bg {
+  background-image: url(../../images/img-05.jpg);
   background-color: #f2f5f6;
+  background-color: #cbcbd5;
   background-position: center center;
   background-size: cover;
-  background-blend-mode: darken;
-  position: relative; }
+  background-attachment: fixed;
+  background-blend-mode: screen; }
 
 section {
   padding: 3rem 5rem; }
@@ -304,11 +319,26 @@ h2 {
 .hero {
   min-height: 70vh;
   position: relative;
-  background-image: url(../../images/img-01.jpg);
-  background-color: rgba(255, 0, 0, 0.47);
   background-size: cover;
   background-position: center center;
   background-blend-mode: multiply; }
+  .hero .mySlides {
+    position: absolute;
+    min-height: 70vh;
+    width: 100%;
+    top: 0;
+    background-color: rgba(255, 0, 0, 0.47);
+    left: 0;
+    display: none; }
+    .hero .mySlides-img {
+      height: 70vh;
+      -o-object-fit: cover;
+         object-fit: cover;
+      width: 100%;
+      display: block;
+      -webkit-filter: brightness(40%);
+              filter: brightness(40%);
+      mix-blend-mode: multiply; }
   .hero-center {
     position: absolute;
     top: 50%;
@@ -359,8 +389,9 @@ h2 {
       margin: 0.3rem;
       border-radius: 50%; }
       .hero__pagination > *:hover {
-        cursor: pointer; }
-    .hero__pagination-01 {
+        cursor: pointer;
+        background-color: #ecbd45; }
+    .hero__pagination .active {
       background-color: #ecbd45; }
 
 .featured-games {
