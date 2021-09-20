@@ -1,8 +1,6 @@
 .hero {
   min-height: 70vh;
   position: relative;
-  // background-image: url(../../images/img-01.jpg);
-  // background-color: rgba(red, 0.47);
   background-size: cover;
   background-position: center center;
   background-blend-mode: multiply;
@@ -203,22 +201,6 @@
         text-align: left;
       }
     }
-
-    .second-game {
-      overflow: hidden;
-
-      .box-2 {
-        order: 1;
-      }
-      .game-image {
-        transform: rotate(6deg);
-      }
-
-      &--text {
-        margin-bottom: 2rem;
-        margin-left: 2rem;
-      }
-    }
   }
 
   &__btn {
@@ -246,8 +228,19 @@
 
 // About the company section
 .about {
+  margin-bottom: 5rem;
   &__text {
     margin-top: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: #fff;
+    filter: drop-shadow(2px 4px 8px #585858);
+    border-radius: 8px;
+
+    @include respond(tab-land) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
 
     &-main {
       text-align: center;
@@ -257,6 +250,7 @@
     &-sub {
       margin-bottom: 1rem;
       max-width: 80%;
+      // text-align: justify;
       margin-left: auto;
       margin-right: auto;
       text-align: center;

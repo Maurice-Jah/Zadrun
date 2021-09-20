@@ -13,10 +13,15 @@
   &__logo {
     height: 5rem;
     width: 5rem;
-    border: 2px solid red;
     text-align: center;
     line-height: 5rem; //remove later
     color: white;
+
+    a {
+      text-decoration: none;
+      color: $white-color;
+      font-size: 2.2rem;
+    }
   }
 
   &__list {
@@ -24,7 +29,7 @@
     list-style: none;
 
     &-link {
-      padding: 1rem 2rem;
+      padding: 1rem;
       margin: 0 2rem;
 
       &--item {

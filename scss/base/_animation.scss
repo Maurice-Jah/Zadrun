@@ -7,15 +7,33 @@
   transition-timing-function: ease-in-out;
 }
 
-// @keyframes fade {
-//   0% {
-//     opacity: 0.4;
-//   }
+@keyframes fade {
+  0% {
+    opacity: 0.4;
+  }
 
-//   50% {
-//     opacity: 0.8;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
