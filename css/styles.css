@@ -67,6 +67,26 @@ $breakpoints
   100% {
     background-position-x: 1000px; } }
 
+@-webkit-keyframes slidInFromLeft {
+  0% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    /* off the screen */ }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    /* normal position */ } }
+
+@keyframes slidInFromLeft {
+  0% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    /* off the screen */ }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    /* normal position */ } }
+
 *,
 *::before,
 *::after {
@@ -90,7 +110,6 @@ body {
 
 .bg {
   background-image: url(../../images/img-05.jpg);
-  background-color: #f2f5f6;
   background-color: #cbcbd5;
   background-position: center center;
   background-size: cover;
@@ -476,7 +495,9 @@ h2 {
         -webkit-transform: rotate(330deg);
             -ms-transform: rotate(330deg);
                 transform: rotate(330deg);
-        margin-top: -5rem; }
+        margin-top: -5rem;
+        -webkit-animation: slidInFromLeft 1s ease-in;
+                animation: slidInFromLeft 1s ease-in; }
         @media only screen and (max-width: 32em) {
           .featured-games__games-Box--image {
             width: 10rem;
@@ -584,6 +605,7 @@ h2 {
     .about__text-sub {
       margin-bottom: 1rem;
       max-width: 80%;
+      text-align: justify;
       margin-left: auto;
       margin-right: auto;
       text-align: center; }
@@ -1059,7 +1081,7 @@ h2 {
       font-size: 1.3rem; }
   .company__about {
     text-align: center;
-    background-color: #fff; }
+    background-color: #f2f5f6; }
     .company__about-name {
       margin-bottom: 2rem; }
     .company__about-info {
@@ -1068,56 +1090,139 @@ h2 {
       .company__about-info > * {
         margin-bottom: 1.5rem;
         line-height: 2rem; }
-  .company-leaders__heading {
+
+.leaders {
+  position: relative; }
+  .leaders-bg {
+    position: relative;
+    background-image: url(../../images/bg-01.jpg);
+    background-color: #746b66;
+    background-size: cover;
+    background-blend-mode: multiply; }
+  .leaders__title {
+    text-transform: uppercase;
     text-align: center;
-    font-size: 1rem;
-    margin-bottom: 5rem; }
-  .company-leaders__ceo, .company-leaders__president {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 5rem; }
-    .company-leaders__ceo-image, .company-leaders__president-image {
-      width: 30rem;
-      height: 20rem;
-      margin-left: -5rem; }
-      .company-leaders__ceo-image--img, .company-leaders__president-image--img {
+    color: #fff; }
+  .leaders__profile {
+    margin-top: 5rem;
+    -webkit-box-shadow: 2px 2px 3px #585858;
+            box-shadow: 2px 2px 3px #585858;
+    background-color: #f2f5f6;
+    border-radius: 8px;
+    height: 25rem;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto; }
+    .leaders__profile-image {
+      width: 16rem;
+      height: 23rem;
+      position: absolute;
+      left: 20%;
+      -webkit-transform: rotate(340deg);
+          -ms-transform: rotate(340deg);
+              transform: rotate(340deg);
+      -webkit-transition: all 0.8s ease-in-out;
+      -o-transition: all 0.8s ease-in-out;
+      transition: all 0.8s ease-in-out; }
+      .leaders__profile-image:hover {
+        -webkit-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+                transform: rotate(360deg); }
+      .leaders__profile-image img {
         width: 100%;
-        height: 100%; }
-    .company-leaders__ceo-profile, .company-leaders__president-profile {
-      width: 60%; }
-      .company-leaders__ceo-profile--name, .company-leaders__president-profile--name {
-        font-size: 2rem;
-        font-family: "Poppins", sans-serif;
-        font-weight: bold;
-        letter-spacing: 0.14rem;
-        color: #a03a3a; }
-      .company-leaders__ceo-profile--post, .company-leaders__president-profile--post {
-        font-family: "Poppins", sans-serif;
-        font-weight: bold;
-        color: #ff0000;
-        letter-spacing: 0.14em; }
-      .company-leaders__ceo-profile--about, .company-leaders__president-profile--about {
-        margin-top: 2rem;
-        line-height: 2rem; }
-      .company-leaders__ceo-profile a, .company-leaders__president-profile a {
-        text-decoration: none;
-        color: rgba(34, 44, 55, 0.7);
-        font-weight: bold;
-        display: inline-block;
-        margin-top: 2rem;
-        -webkit-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out; }
-        .company-leaders__ceo-profile a:hover, .company-leaders__president-profile a:hover {
-          color: #222c37; }
-  .company-leaders__president-image {
-    width: 25rem;
-    height: 30rem;
-    margin-left: 0rem; }
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -webkit-filter: drop-shadow(2px 2px 5px #585858);
+                filter: drop-shadow(2px 2px 5px #585858);
+        border-radius: 8px;
+        margin-top: -20%; }
+    .leaders__profile-text {
+      width: 60%;
+      margin-left: auto;
+      margin-top: 5rem;
+      margin-right: 2rem;
+      padding: 1rem 2rem;
+      text-align: justify;
+      -webkit-hyphens: auto;
+          -ms-hyphens: auto;
+              hyphens: auto; }
+      .leaders__profile-text--name {
+        font-size: 1.2rem;
+        position: absolute;
+        bottom: 12%;
+        left: 50%;
+        -webkit-transform: translate(-50% -50%);
+            -ms-transform: translate(-50% -50%);
+                transform: translate(-50% -50%);
+        text-align: center; }
+        .leaders__profile-text--name span {
+          font-size: 0.8rem;
+          color: rgba(34, 44, 55, 0.8); }
+      .leaders__profile-text--main {
+        margin-bottom: 1rem;
+        margin-top: 4rem;
+        font-weight: bold; }
+
+.leaders {
+  position: relative; }
+  .leaders__president {
+    margin-top: 5rem;
+    -webkit-box-shadow: 2px 2px 3px #585858;
+            box-shadow: 2px 2px 3px #585858;
+    background-color: #f2f5f6;
+    border-radius: 8px;
+    height: 25rem;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto; }
+    .leaders__president-image {
+      width: 16rem;
+      height: 13rem;
+      position: absolute;
+      right: 23%;
+      -webkit-transform: rotate(340deg);
+          -ms-transform: rotate(340deg);
+              transform: rotate(340deg);
+      -webkit-transition: all 0.8s ease-in-out;
+      -o-transition: all 0.8s ease-in-out;
+      transition: all 0.8s ease-in-out; }
+      .leaders__president-image:hover {
+        -webkit-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+                transform: rotate(360deg); }
+      .leaders__president-image img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -webkit-filter: drop-shadow(2px 2px 5px #585858);
+                filter: drop-shadow(2px 2px 5px #585858);
+        border-radius: 8px;
+        margin-top: 18%; }
+    .leaders__president-text {
+      width: 60%;
+      margin-right: auto;
+      margin-top: 5rem;
+      margin-right: 2rem;
+      padding: 1rem 2rem;
+      text-align: justify;
+      -webkit-hyphens: auto;
+          -ms-hyphens: auto;
+              hyphens: auto; }
+      .leaders__president-text--name {
+        font-size: 1.2rem;
+        position: absolute;
+        bottom: 12%;
+        left: 45%;
+        -webkit-transform: translate(-50% -50%);
+            -ms-transform: translate(-50% -50%);
+                transform: translate(-50% -50%);
+        text-align: center; }
+        .leaders__president-text--name span {
+          font-size: 0.8rem;
+          color: rgba(34, 44, 55, 0.8); }
+      .leaders__president-text--main {
+        margin-bottom: 1rem;
+        margin-top: 4rem;
+        font-weight: bold; }

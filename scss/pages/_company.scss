@@ -26,7 +26,7 @@
 
   &__about {
     text-align: center;
-    background-color: $white-color;
+    background-color: $primary-color;
 
     &-name {
       margin-bottom: 2rem;
@@ -41,70 +41,219 @@
       }
     }
   }
+}
 
-  //   Leaders
-  &-leaders {
-    &__heading {
-      text-align: center;
-      font-size: 1rem;
-      margin-bottom: 5rem;
+//   //   Leaders
+//   &-leaders {
+//     &__heading {
+//       text-align: center;
+//       font-size: 1rem;
+//       margin-bottom: 5rem;
+//     }
+
+//     &__ceo,
+//     &__president {
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       margin-bottom: 5rem;
+//       &-image {
+//         width: 30rem;
+//         height: 20rem;
+//         margin-left: -5rem;
+//         &--img {
+//           width: 100%;
+//           height: 100%;
+//         }
+//       }
+//       &-profile {
+//         width: 60%;
+//         &--name {
+//           font-size: 2rem;
+//           font-family: "Poppins", sans-serif;
+//           font-weight: bold;
+//           letter-spacing: 0.14rem;
+//           color: $dark-red;
+//         }
+//         &--post {
+//           font-family: "Poppins", sans-serif;
+//           font-weight: bold;
+//           color: $red-color;
+//           letter-spacing: 0.14em;
+//         }
+//         &--about {
+//           margin-top: 2rem;
+//           line-height: 2rem;
+//         }
+
+//         a {
+//           text-decoration: none;
+//           color: rgba($dark-color, 0.7);
+//           font-weight: bold;
+//           display: inline-block;
+//           margin-top: 2rem;
+//           transition: all 0.3s ease-in-out;
+
+//           &:hover {
+//             color: $dark-color;
+//           }
+//         }
+//       }
+//     }
+
+//     &__president {
+//       &-image {
+//         width: 25rem;
+//         height: 30rem;
+//         margin-left: 0rem;
+//       }
+//     }
+//   }
+// }
+
+.leaders {
+  position: relative;
+
+  &-bg {
+    position: relative;
+    background-image: url(../../images/bg-01.jpg);
+    background-color: #746b66;
+    background-size: cover;
+    background-blend-mode: multiply;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+    color: $white-color;
+  }
+
+  &__profile {
+    margin-top: 5rem;
+    box-shadow: 2px 2px 3px #585858;
+    background-color: $primary-color;
+    border-radius: 8px;
+    height: 25rem;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+    &-image {
+      width: 16rem;
+      height: 23rem;
+      position: absolute;
+      left: 20%;
+      transform: rotate(340deg);
+      transition: all 0.8s ease-in-out;
+
+      &:hover {
+        transform: rotate(360deg);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: drop-shadow(2px 2px 5px #585858);
+        border-radius: 8px;
+        margin-top: -20%;
+      }
     }
 
-    &__ceo,
-    &__president {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 5rem;
-      &-image {
-        width: 30rem;
-        height: 20rem;
-        margin-left: -5rem;
-        &--img {
-          width: 100%;
-          height: 100%;
+    &-text {
+      width: 60%;
+      margin-left: auto;
+      margin-top: 5rem;
+      margin-right: 2rem;
+      padding: 1rem 2rem;
+      text-align: justify;
+      hyphens: auto;
+
+      &--name {
+        font-size: 1.2rem;
+        position: absolute;
+        bottom: 12%;
+        left: 50%;
+        transform: translate(-50% -50%);
+        text-align: center;
+
+        span {
+          font-size: 0.8rem;
+          color: rgba($dark-color, 0.8);
         }
       }
-      &-profile {
-        width: 60%;
-        &--name {
-          font-size: 2rem;
-          font-family: "Poppins", sans-serif;
-          font-weight: bold;
-          letter-spacing: 0.14rem;
-          color: $dark-red;
-        }
-        &--post {
-          font-family: "Poppins", sans-serif;
-          font-weight: bold;
-          color: $red-color;
-          letter-spacing: 0.14em;
-        }
-        &--about {
-          margin-top: 2rem;
-          line-height: 2rem;
-        }
+      &--main {
+        margin-bottom: 1rem;
+        margin-top: 4rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
 
-        a {
-          text-decoration: none;
-          color: rgba($dark-color, 0.7);
-          font-weight: bold;
-          display: inline-block;
-          margin-top: 2rem;
-          transition: all 0.3s ease-in-out;
+// President
 
-          &:hover {
-            color: $dark-color;
-          }
-        }
+.leaders {
+  position: relative;
+
+  &__president {
+    margin-top: 5rem;
+    box-shadow: 2px 2px 3px #585858;
+    background-color: $primary-color;
+    border-radius: 8px;
+    height: 25rem;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+    &-image {
+      width: 16rem;
+      height: 13rem;
+      position: absolute;
+      right: 23%;
+      transform: rotate(340deg);
+      transition: all 0.8s ease-in-out;
+
+      &:hover {
+        transform: rotate(360deg);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: drop-shadow(2px 2px 5px #585858);
+        border-radius: 8px;
+        margin-top: 18%;
       }
     }
 
-    &__president {
-      &-image {
-        width: 25rem;
-        height: 30rem;
-        margin-left: 0rem;
+    &-text {
+      width: 60%;
+      margin-right: auto;
+      margin-top: 5rem;
+      margin-right: 2rem;
+      padding: 1rem 2rem;
+      text-align: justify;
+      hyphens: auto;
+
+      &--name {
+        font-size: 1.2rem;
+        position: absolute;
+        bottom: 12%;
+        left: 45%;
+        transform: translate(-50% -50%);
+        text-align: center;
+
+        span {
+          font-size: 0.8rem;
+          color: rgba($dark-color, 0.8);
+        }
+      }
+      &--main {
+        margin-bottom: 1rem;
+        margin-top: 4rem;
+        font-weight: bold;
       }
     }
   }

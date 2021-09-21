@@ -37,3 +37,13 @@
     background-position-x: 1000px;
   }
 }
+
+@keyframes slidInFromLeft {
+  0% {
+    transform: translateX(-50%); /* off the screen */
+  }
+
+  100% {
+    transform: translateX(0); /* normal position */
+  }
+}
