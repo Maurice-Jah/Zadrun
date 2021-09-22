@@ -45,6 +45,12 @@ $breakpoints
       @content;
     }
   }
+
+  @if $breakpoint == land {
+    @media only screen and (max-width: 62.5em) {
+      @content;
+    }
+  }
 }
 
 @mixin absCenter {

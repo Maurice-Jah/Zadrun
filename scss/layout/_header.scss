@@ -46,82 +46,124 @@
   }
 }
 
-// For small header
-.sidebar {
-  background-color: rgb(158, 87, 87);
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 1rem 3rem;
-  color: $white-color;
+// For the small header
+.header2 {
+  background-color: $gray-color;
+  position: fixed;
+  z-index: 800;
+  width: 100%;
+  min-height: 3rem;
   display: none;
 
   @include respond(tab-land) {
     display: block;
   }
 
-  &__click {
-    width: 2rem;
-    height: 2px;
-    background-color: black;
+  &__background {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+  }
+  &__logo {
+    margin-top: 0.8rem;
+    padding: 0.5rem 3rem;
+    a {
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: $white-color;
+    }
+  }
+  &__toggle {
     position: absolute;
-    right: 3rem;
-    top: 1.5rem;
-    z-index: 400;
+    z-index: 500;
+    right: 2rem;
+    top: 2.5rem;
 
     &:hover {
       cursor: pointer;
     }
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      width: 2rem;
-      height: 2px;
-      background-color: black;
-      z-index: 400;
-    }
-
-    &::before {
-      top: 0.7rem;
-    }
-
-    &::after {
-      bottom: 0.7rem;
-    }
-
-    &-checkbox {
-      display: none;
-    }
   }
-  #toggle:checked ~ &__list {
+
+  &__toggle,
+  &__toggle::before,
+  &__toggle::after {
+    position: fixed;
+    height: 2px;
+    width: 2rem;
+    border-radius: 8px;
+    background-color: $dark-yellow;
+  }
+
+  &__toggle::before,
+  &__toggle::after {
+    content: "";
+    position: absolute;
+  }
+  &__toggle::before {
+    bottom: 7px;
+  }
+
+  &__toggle::after {
+    top: 7px;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox:checked ~ &__list {
     visibility: visible;
     opacity: 1;
-    width: 50vw;
+    width: 80%;
   }
+
+  &__checkbox:checked ~ &__background {
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  &__checkbox:checked ~ &__toggle {
+    background: transparent;
+  }
+
+  &__checkbox:checked ~ &__toggle::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  &__checkbox:checked ~ &__toggle::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
   &__list {
+    list-style-type: none;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
     position: fixed;
     z-index: 300;
-    right: 0rem;
-    top: 0rem;
-    list-style: none;
-    min-height: 70vh;
-    padding-top: 2rem;
-    background-color: #fff;
+    right: 0;
+    top: 0;
     visibility: hidden;
+    background: $white-color;
     opacity: 0;
     width: 0;
+
     transition: width 0.5s ease-in-out;
 
     &-link {
-      margin: 3rem 1rem;
-
+      margin: 2rem 1rem;
       &--item {
         text-decoration: none;
         color: $dark-color;
         font-family: "Poppins", sans-serif;
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         font-weight: bold;
       }
     }

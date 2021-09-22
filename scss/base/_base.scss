@@ -33,12 +33,12 @@ body {
 section {
   padding: 3rem 5rem;
 
-  @include respond(phone) {
-    padding: 3rem 4rem;
+  @include respond(land) {
+    padding: 2rem 4rem;
   }
 
   @include respond(phone) {
-    padding: 3rem 3rem;
+    padding: 1rem 3rem;
   }
 
   @include respond(sm-phone) {

@@ -36,27 +36,33 @@
   <body>
     <div class="container">
       <!-- Small header -->
-      <div class="sidebar">
-        <div class="sidebar__logo">Zadrun</div>
-        <label for="toggle" class="sidebar__click"> </label>
-        <input type="checkbox" class="sidebar__click-checkbox" id="toggle" />
+      <div class="header2">
+        <div class="header2__logo">
+          <a href="index.html"> Zadrun</a>
+         </div>
+     
+        <input type="checkbox" class="header2__checkbox" id="toggle" />
 
-        <ul class="sidebar__list">
-          <li class="sidebar__list-link">
-            <a href="games.html" class="sidebar__list-link--item">GAMES</a>
+        <label for="toggle" class="header2__toggle"> </label>
+        <label class="header2__background" for="toggle" > </label>
+        <ul class="header2__list">
+          <li class="header2__list-link">
+            <a href="games.html" class="header2__list-link--item">GAMES</a>
           </li>
-          <li class="sidebar__list-link">
-            <a href="company.html" class="sidebar__list-link--item">COMPANY</a>
+          <li class="header2__list-link">
+            <a href="company.html" class="header2__list-link--item">COMPANY</a>
           </li>
-          <li class="sidebar__list-link">
-            <a href="careers.html" class="sidebar__list-link--item">CAREERS</a>
+          <li class="header2__list-link">
+            <a href="careers.html" class="header2__list-link--item">CAREERS</a>
           </li>
-          <li class="sidebar__list-link">
-            <a href="support.html" class="sidebar__list-link--item">SUPPORT</a>
+          <li class="header2__list-link">
+            <a href="support.html" class="header2__list-link--item">SUPPORT</a>
           </li>
         </ul>
       </div>
       <!-- Ends here -->
+
+
       <header class="header">
         <div class="header__logo"><a href="index.html"> Zadrun </a></div>
         <ul class="header__list">
@@ -92,7 +98,7 @@
         <div class="hero-center">
           <h1 class="hero__title">Ride Not Solo</h1>
           <p class="hero__sub">Challenge your friend’s intellect</p>
-          <button class="hero__viewBtn btn" onclick="window.open('games.html', '_self')">View Game</button>
+          <button class="hero__viewBtn btn" onclick="window.open('viewGame.html', '_self')">View Game</button>
         </div>
         <div class="hero__pagination">
           <span
@@ -154,7 +160,20 @@
               </p>
             </div>
 
-            <button class="featured-games__btn btn" onclick="window.open('games.html', '_self')" >Our Games</button>
+            <button class="featured-games__btn btn" onclick="window.open('viewGame.html', '_self')" >Our Games</button>
+          </div>
+
+          <!-- For the small screen -->
+          <div class="featured-games__small">
+            <div class="featured-games__small-image">
+              <img src="images/img-05.jpg" alt="small-screen-image" class="featured-games__small-image--img">
+            </div>
+            <h1 class="featured-games__small-title">Live Trivia</h1>
+            <p class="featured-games__small-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quis, earum placeat quidem quo impedit ullam reiciendis delectus consequuntur cum.</p>
+            
+            <div class="featured-games__small-button">
+            <a href="viewGame.html" class="featured-games__small-btn" role="button">View Game </a>
+          </div>
           </div>
         </section>
         <section class="about">
@@ -201,13 +220,13 @@
               <a href="support.html" class="footer__list-link--item">SUPPORT</a>
             </li>
             <li class="footer__list-link">
-              <a href="" class="footer__list-link--item">CONTACT</a>
+              <a href="company.html" class="footer__list-link--item">CONTACT</a>
             </li>
             <li class="footer__list-link">
-              <a href="" class="footer__list-link--item">GAMES</a>
+              <a href="viewGame.html" class="footer__list-link--item">GAMES</a>
             </li>
             <li class="footer__list-link">
-              <a href="" class="footer__list-link--item">CAREERS</a>
+              <a href="careers.html" class="footer__list-link--item">CAREERS</a>
             </li>
           </ul>
 
