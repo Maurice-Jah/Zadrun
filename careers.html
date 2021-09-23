@@ -35,35 +35,35 @@
   </head>
   <body>
     <div class="container">
-        <!-- Small header -->
-        <div class="header2">
-          <div class="header2__logo">
-            <a href="index.html"> Zadrun</a>
-           </div>
-       
-          <input type="checkbox" class="header2__checkbox" id="toggle" />
-  
-          <label for="toggle" class="header2__toggle"> </label>
-          <label class="header2__background" for="toggle" > </label>
-          <ul class="header2__list">
-            <li class="header2__list-link">
-              <a href="games.html" class="header2__list-link--item">GAMES</a>
-            </li>
-            <li class="header2__list-link">
-              <a href="company.html" class="header2__list-link--item">COMPANY</a>
-            </li>
-            <li class="header2__list-link">
-              <a href="careers.html" class="header2__list-link--item">CAREERS</a>
-            </li>
-            <li class="header2__list-link">
-              <a href="support.html" class="header2__list-link--item">SUPPORT</a>
-            </li>
-          </ul>
+      <!-- Small header -->
+      <div class="header2">
+        <div class="header2__logo">
+          <a href="index.html"> Zadrun</a>
         </div>
-        <!-- Ends here -->
+
+        <input type="checkbox" class="header2__checkbox" id="toggle" />
+
+        <label for="toggle" class="header2__toggle"> </label>
+        <label class="header2__background" for="toggle"> </label>
+        <ul class="header2__list">
+          <li class="header2__list-link">
+            <a href="games.html" class="header2__list-link--item">GAMES</a>
+          </li>
+          <li class="header2__list-link">
+            <a href="company.html" class="header2__list-link--item">COMPANY</a>
+          </li>
+          <li class="header2__list-link">
+            <a href="careers.html" class="header2__list-link--item">CAREERS</a>
+          </li>
+          <li class="header2__list-link">
+            <a href="support.html" class="header2__list-link--item">SUPPORT</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Ends here -->
       <header class="header">
         <div class="header__logo">Zadrun</div>
-        <nav class="header__list">
+        <ul class="header__list">
           <li class="header__list-link">
             <a href="games.html" class="header__list-link--item">GAMES</a>
           </li>
@@ -76,7 +76,7 @@
           <li class="header__list-link">
             <a href="support.html" class="header__list-link--item">SUPPORT</a>
           </li>
-        </nav>
+        </ul>
       </header>
       <section class="careers">
         <div class="careers__text">
@@ -108,8 +108,10 @@
           reprehenderit sapiente voluptate quia sunt incidunt odio?
         </p>
 
-        <div class="ethics__photos">
-          <div class="ethics__photos-image001">
+        <!-- Section for the images and arrow -->
+        <!-- For the images -->
+        <div class="ethics__photos" id="slider-wrapper">
+          <div class="ethics__photos-image001 slide">
             <img
               src="images/bg.jpg"
               alt="ethics-photo"
@@ -117,39 +119,60 @@
             />
           </div>
 
-          <div class="ethics__photos-image002">
+          <div class="ethics__photos-image002 slide">
             <img
-              src="images/img-01.jpg"
+              src="images/img-08.jpg"
               alt="ethics-photo"
               class="ethics__photos-image002--img"
             />
           </div>
 
-          <div class="ethics__photos-image002">
+          <div class="ethics__photos-image002 slide">
             <img
-              src="images/img-01.jpg"
+              src="images/bg-03.jpg"
               alt="ethics-photo"
               class="ethics__photos-image002--img"
             />
           </div>
+
+          <div class="ethics__photos-image002 slide">
+            <img
+              src="images/bg-04.jpg"
+              alt="ethics-photo"
+              class="ethics__photos-image002--img"
+            />
+          </div>
+
+          <div class="ethics__photos-image001 slide">
+            <img
+              src="images/bg-03.jpg"
+              alt="ethics-photo"
+              class="ethics__photos-image001--img"
+            />
+          </div>
         </div>
+
+        <!-- For the arrows -->
         <div class="ethics__photos-arrows">
-          <a href="#">
+          <span>
             <img
               src="images/arrow.svg"
               alt="arrow-right"
               class="ethics__photos-arrows--left"
+              id="left"
             />
-          </a>
+          </span>
 
-          <a href="#">
+          <span>
             <img
               src="images/arrow.svg"
               alt="arrow-right"
               class="ethics__photos-arrows--right"
+              id="right"
             />
-          </a>
+          </span>
         </div>
+        <!-- Ends here -->
       </section>
 
       <!-------------- Vacant Positions ---------------------->
@@ -235,5 +258,7 @@
         <p class="footer__copyright">©2021 ZADRUN INC. ALL RIGHTS RESERVED</p>
       </section>
     </div>
+
+    <script src="js/careers.js"></script>
   </body>
 </html>

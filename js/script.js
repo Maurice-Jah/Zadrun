@@ -19,3 +19,15 @@ function showSlides() {
   dots[slideIndex - 1].className += " active";
   setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
+
+// for the carrer section image slider
+// let arrowRight = document.getElementById("slideRight");
+// let arrowLeft = document.getElementById("slideLeft");
+
+// arrowLeft.addEventListener("click", function () {
+//   document.getElementById("slider").scrollLeft -= 180;
+// });
+
+// arrowRight.addEventListener("click", function () {
+//   document.getElementById("slider").scrollLeft += 180;
+// });
