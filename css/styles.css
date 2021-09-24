@@ -1077,13 +1077,41 @@ nav {
           align-items: center;
   color: #fff;
   background-color: #000000; }
+  @media only screen and (max-width: 37.5em) {
+    .careers {
+      background-image: url(../../images/img-10.png);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-color: #8b6262ed;
+      background-blend-mode: multiply; } }
   .careers__text {
     width: 50%; }
+    @media only screen and (max-width: 56.25em) {
+      .careers__text {
+        width: 60%; } }
+    @media only screen and (max-width: 37.5em) {
+      .careers__text {
+        width: 90%;
+        text-align: center; } }
     .careers__text-main {
       font-size: 3rem;
       margin-bottom: 3rem; }
+      @media only screen and (max-width: 62.5em) {
+        .careers__text-main {
+          font-size: 2rem;
+          margin-top: 2rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .careers__text-main {
+          margin-bottom: 1rem; } }
     .careers__text-sub {
       font-size: 1.5rem; }
+      @media only screen and (max-width: 56.25em) {
+        .careers__text-sub {
+          font-size: 1.3rem; } }
+      @media only screen and (max-width: 62.5em) {
+        .careers__text-sub {
+          font-size: 1.2rem; } }
   .careers__image {
     width: 25rem;
     height: 25rem;
@@ -1091,6 +1119,18 @@ nav {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat; }
+    @media only screen and (max-width: 62.5em) {
+      .careers__image {
+        width: 20rem;
+        height: 20rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .careers__image {
+        width: 13rem;
+        height: 13rem;
+        margin-top: 4rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .careers__image {
+        display: none; } }
 
 .ethics {
   margin-bottom: 1rem; }
@@ -1113,11 +1153,33 @@ nav {
     overflow-x: auto;
     margin-left: -5rem;
     margin-right: -5rem; }
+    @media only screen and (max-width: 62.5em) {
+      .ethics__photos {
+        margin-left: -4rem;
+        margin-right: -4rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .ethics__photos {
+        gap: 2rem;
+        margin-left: -3rem;
+        margin-right: -3rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .ethics__photos {
+        gap: 1rem;
+        margin-left: -2rem;
+        margin-right: -2rem; } }
     .ethics__photos::-webkit-scrollbar {
       display: none; }
     .ethics__photos-image001, .ethics__photos-image002 {
       min-width: 27rem;
       height: 17rem; }
+      @media only screen and (max-width: 56.25em) {
+        .ethics__photos-image001, .ethics__photos-image002 {
+          min-width: 20rem;
+          height: 15rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .ethics__photos-image001, .ethics__photos-image002 {
+          max-width: 30%;
+          height: 15rem; } }
       .ethics__photos-image001--img, .ethics__photos-image002--img {
         width: 100%;
         height: 100%;
@@ -1158,8 +1220,25 @@ nav {
 
 .open-position {
   background: #fff; }
+  @media only screen and (max-width: 56.25em) {
+    .open-position {
+      padding-left: 2rem;
+      padding-right: 2rem; } }
+  @media only screen and (max-width: 32em) {
+    .open-position {
+      margin-top: -5rem; } }
   .open-position__heading {
     margin-bottom: 4rem; }
+    @media only screen and (max-width: 56.25em) {
+      .open-position__heading {
+        margin-bottom: 2rem;
+        font-size: 1.4rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .open-position__heading {
+        text-align: center; } }
+  @media only screen and (max-width: 37.5em) {
+    .open-position__vacancy {
+      text-align: center; } }
   .open-position__vacancy-00, .open-position__vacancy-01 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1171,17 +1250,41 @@ nav {
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .open-position__vacancy-00, .open-position__vacancy-01 {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
     .open-position__vacancy-00 p:nth-child(1), .open-position__vacancy-01 p:nth-child(1) {
       font-size: 1.3rem;
       font-weight: bold;
       font-family: "Poppins", sans-serif;
       letter-spacing: 0.05rem;
       padding-bottom: 0.5rem; }
+      @media only screen and (max-width: 56.25em) {
+        .open-position__vacancy-00 p:nth-child(1), .open-position__vacancy-01 p:nth-child(1) {
+          font-size: 1rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .open-position__vacancy-00 p:nth-child(1), .open-position__vacancy-01 p:nth-child(1) {
+          padding-bottom: 0rem; } }
     .open-position__vacancy-00 p:nth-child(2), .open-position__vacancy-01 p:nth-child(2) {
       font-size: 0.9rem;
       letter-spacing: 0.05rem;
       padding-bottom: 0.5rem;
       opacity: 0.65; }
+      @media only screen and (max-width: 56.25em) {
+        .open-position__vacancy-00 p:nth-child(2), .open-position__vacancy-01 p:nth-child(2) {
+          font-size: 0.7rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .open-position__vacancy-00 p:nth-child(2), .open-position__vacancy-01 p:nth-child(2) {
+          padding-bottom: 1rem; } }
     .open-position__vacancy-00--apply, .open-position__vacancy-01--apply {
       background: transparent;
       border: 3px solid rgba(79, 212, 172, 0.5);
@@ -1191,6 +1294,10 @@ nav {
       -webkit-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
+      @media only screen and (max-width: 56.25em) {
+        .open-position__vacancy-00--apply, .open-position__vacancy-01--apply {
+          font-size: 0.8rem;
+          padding: 0.5rem 1rem; } }
       .open-position__vacancy-00--apply:hover, .open-position__vacancy-01--apply:hover {
         font-weight: bold;
         -webkit-transform: scale(1.03);
