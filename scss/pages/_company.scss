@@ -14,6 +14,14 @@
     padding: 5rem;
     font-weight: bold;
 
+    @include respond(tab-land) {
+      width: 60%;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
+
     &__heading {
       margin-bottom: 1rem;
       font-size: 2rem;
@@ -35,6 +43,15 @@
     &-info {
       width: 80%;
       margin: auto;
+
+      @include respond(tab-land) {
+        width: 90%;
+      }
+
+      @include respond(phone) {
+        width: 100%;
+      }
+
       & > * {
         margin-bottom: 1.5rem;
         line-height: 2rem;
@@ -43,73 +60,7 @@
   }
 }
 
-//   //   Leaders
-//   &-leaders {
-//     &__heading {
-//       text-align: center;
-//       font-size: 1rem;
-//       margin-bottom: 5rem;
-//     }
-
-//     &__ceo,
-//     &__president {
-//       display: flex;
-//       justify-content: space-between;
-//       align-items: center;
-//       margin-bottom: 5rem;
-//       &-image {
-//         width: 30rem;
-//         height: 20rem;
-//         margin-left: -5rem;
-//         &--img {
-//           width: 100%;
-//           height: 100%;
-//         }
-//       }
-//       &-profile {
-//         width: 60%;
-//         &--name {
-//           font-size: 2rem;
-//           font-family: "Poppins", sans-serif;
-//           font-weight: bold;
-//           letter-spacing: 0.14rem;
-//           color: $dark-red;
-//         }
-//         &--post {
-//           font-family: "Poppins", sans-serif;
-//           font-weight: bold;
-//           color: $red-color;
-//           letter-spacing: 0.14em;
-//         }
-//         &--about {
-//           margin-top: 2rem;
-//           line-height: 2rem;
-//         }
-
-//         a {
-//           text-decoration: none;
-//           color: rgba($dark-color, 0.7);
-//           font-weight: bold;
-//           display: inline-block;
-//           margin-top: 2rem;
-//           transition: all 0.3s ease-in-out;
-
-//           &:hover {
-//             color: $dark-color;
-//           }
-//         }
-//       }
-//     }
-
-//     &__president {
-//       &-image {
-//         width: 25rem;
-//         height: 30rem;
-//         margin-left: 0rem;
-//       }
-//     }
-//   }
-// }
+//   Leaders
 
 .leaders {
   position: relative;
@@ -134,17 +85,59 @@
     background-color: $primary-color;
     border-radius: 8px;
     height: 25rem;
-    width: 70%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
 
+    @include respond(tab-land) {
+      width: 100%;
+    }
+
+    @include respond(phone) {
+      height: auto;
+      margin-top: 8rem;
+      padding-top: 10rem;
+    }
+
+    @include respond(sm-phone) {
+      margin-top: 3rem;
+      padding-top: 13rem;
+    }
+
     &-image {
       width: 16rem;
-      height: 23rem;
+      height: 13rem;
       position: absolute;
-      left: 20%;
+      left: 15%;
       transform: rotate(340deg);
       transition: all 0.8s ease-in-out;
+
+      @include respond(land) {
+        width: 13rem;
+        height: 13rem;
+        left: 16%;
+        transform: rotate(0deg);
+      }
+      @include respond(tab-land) {
+        margin-top: 5%;
+        left: 12%;
+        width: 11rem;
+        height: 11rem;
+      }
+
+      @include respond(phone) {
+        width: 10rem;
+        height: 10rem;
+        left: 50%;
+        top: 17%;
+        transform: translate(-50%, -50%);
+      }
+
+      @include respond(sm-phone) {
+        width: 8rem;
+        height: 8rem;
+        top: 22%;
+      }
 
       &:hover {
         transform: rotate(360deg);
@@ -156,7 +149,12 @@
         object-fit: cover;
         filter: drop-shadow(2px 2px 5px #585858);
         border-radius: 8px;
-        margin-top: -20%;
+        margin-top: 20%;
+
+        @include respond(land) {
+          border-radius: 50%;
+          margin-top: 40%;
+        }
       }
     }
 
@@ -164,10 +162,18 @@
       width: 60%;
       margin-left: auto;
       margin-top: 5rem;
-      margin-right: 2rem;
+      margin-right: 0rem;
       padding: 1rem 2rem;
       text-align: justify;
       hyphens: auto;
+
+      @include respond(tab-land) {
+        text-align: center;
+      }
+
+      @include respond(phone) {
+        width: 100%;
+      }
 
       &--name {
         font-size: 1.2rem;
@@ -176,6 +182,26 @@
         left: 50%;
         transform: translate(-50% -50%);
         text-align: center;
+
+        @include respond(tab-land) {
+          left: 15%;
+        }
+
+        @include respond(phone) {
+          bottom: 38%;
+          left: 38%;
+        }
+
+        @include respond(sm-phone) {
+          bottom: 42%;
+          left: 35%;
+        }
+
+        @include respond(smallest) {
+          bottom: 49%;
+          font-size: 1rem;
+          left: 30%;
+        }
 
         span {
           font-size: 0.8rem;
@@ -186,6 +212,23 @@
         margin-bottom: 1rem;
         margin-top: 4rem;
         font-weight: bold;
+
+        @include respond(phone) {
+          display: none;
+        }
+      }
+
+      &--sub {
+        @include respond(phone) {
+          margin-top: -6rem;
+          padding-bottom: 1rem;
+        }
+
+        @include respond(sm-phone) {
+          margin-top: -5rem;
+          font-size: 0.9rem;
+          text-align: left;
+        }
       }
     }
   }
@@ -202,20 +245,61 @@
     background-color: $primary-color;
     border-radius: 8px;
     height: 25rem;
-    width: 70%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
+
+    @include respond(tab-land) {
+      width: 100%;
+    }
+
+    @include respond(phone) {
+      height: auto;
+      padding-top: 5rem;
+    }
+
+    @include respond(sm-phone) {
+      margin-top: 3rem;
+      padding-top: 8rem;
+    }
 
     &-image {
       width: 16rem;
       height: 13rem;
       position: absolute;
-      right: 23%;
-      transform: rotate(340deg);
+      right: 20%;
+      transform: rotate(-20deg);
       transition: all 0.8s ease-in-out;
 
+      @include respond(land) {
+        width: 13rem;
+        height: 13rem;
+        transform: rotate(0deg);
+      }
+
+      @include respond(tab-land) {
+        margin-top: 5%;
+        width: 11rem;
+        height: 11rem;
+        right: 13%;
+      }
+
+      @include respond(phone) {
+        width: 10rem;
+        height: 10rem;
+        left: 50%;
+        top: 3%;
+        transform: translate(-50%, -50%);
+      }
+
+      @include respond(sm-phone) {
+        width: 8rem;
+        height: 8rem;
+        top: 22%;
+      }
+
       &:hover {
-        transform: rotate(360deg);
+        transform: rotate(0deg);
       }
 
       img {
@@ -224,7 +308,11 @@
         object-fit: cover;
         filter: drop-shadow(2px 2px 5px #585858);
         border-radius: 8px;
-        margin-top: 18%;
+        margin-top: 38%;
+
+        @include respond(land) {
+          border-radius: 50%;
+        }
       }
     }
 
@@ -237,6 +325,13 @@
       text-align: justify;
       hyphens: auto;
 
+      @include respond(tab-land) {
+        text-align: center;
+      }
+
+      @include respond(phone) {
+        width: 100%;
+      }
       &--name {
         font-size: 1.2rem;
         position: absolute;
@@ -244,6 +339,26 @@
         left: 45%;
         transform: translate(-50% -50%);
         text-align: center;
+
+        @include respond(tab-land) {
+          left: 60%;
+          bottom: 15%;
+        }
+
+        @include respond(phone) {
+          bottom: 45%;
+          left: 35%;
+        }
+
+        @include respond(sm-phone) {
+          left: 28%;
+        }
+
+        @include respond(smallest) {
+          bottom: 53%;
+          font-size: 1rem;
+          left: 26%;
+        }
 
         span {
           font-size: 0.8rem;
@@ -254,6 +369,20 @@
         margin-bottom: 1rem;
         margin-top: 4rem;
         font-weight: bold;
+
+        @include respond(phone) {
+          display: none;
+        }
+      }
+
+      &--sub {
+        @include respond(phone) {
+          padding-bottom: 1rem;
+        }
+
+        @include respond(sm-phone) {
+          padding-top: 2rem;
+        }
       }
     }
   }
