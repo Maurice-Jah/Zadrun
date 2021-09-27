@@ -4,15 +4,37 @@
   background-image: url(../../images/img-07.jpg);
   background-size: cover;
   background-position: center center;
+
+  @include respond(land) {
+    min-height: 50vh;
+  }
+
+  @include respond(sm-phone) {
+    min-height: 30vh;
+  }
 }
 
 .download {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 12rem;
+
+  @include respond(land) {
+    flex-direction: column;
+  }
+
+  @include respond(sm-phone) {
+    position: relative;
+  }
 
   &__keepUp {
     width: 45%;
+
+    @include respond(land) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
 
     &-heading {
       font-size: 2rem;
@@ -20,6 +42,11 @@
       margin-bottom: 1rem;
       font-weight: bold;
       text-transform: uppercase;
+
+      @include respond(sm-phone) {
+        text-transform: capitalize;
+        font-size: 1.2rem;
+      }
     }
 
     &-info {
@@ -27,6 +54,30 @@
       letter-spacing: 0.03rem;
       font-weight: bold;
       opacity: 0.5;
+
+      @include respond(sm-phone) {
+        font-size: 0.5rem;
+        letter-spacing: 0.03rem;
+        font-weight: bold;
+        font-style: italic;
+        text-transform: capitalize;
+      }
+    }
+    &-smallDiv {
+      @include respond(land) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      @include respond(sm-phone) {
+        position: absolute;
+        bottom: -10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+      }
     }
 
     &-socials {
@@ -34,6 +85,11 @@
       align-items: center;
       margin-top: 1rem;
       margin-bottom: 2rem;
+
+      @include respond(sm-phone) {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
 
       .fab {
         background: $gray-color;
@@ -43,6 +99,12 @@
         margin-right: 1.5rem;
         color: $white-color;
         transition: all 0.4s ease-in-out;
+
+        @include respond(sm-phone) {
+          font-size: 0.6rem;
+          margin-right: 1rem;
+          padding: 0.5rem;
+        }
 
         &:hover {
           cursor: pointer;
@@ -54,6 +116,12 @@
       .facebook {
         padding: 0.7rem 0.9rem;
         margin-left: 1rem;
+
+        @include respond(sm-phone) {
+          font-size: 0.6rem;
+          margin-left: 0.5rem;
+          padding: 0.5rem 0.6rem;
+        }
       }
     }
   }
@@ -61,14 +129,34 @@
   &__platforms {
     width: 45%;
 
+    @include respond(land) {
+      width: 100%;
+    }
+
     &-text {
       font-weight: bold;
       opacity: 0.7;
+
+      @include respond(sm-phone) {
+        font-weight: normal;
+        font-size: 0.8rem;
+        margin-top: -1rem;
+      }
     }
 
     &-link {
       display: flex;
-      gap: 5rem;
+      gap: 3rem;
+
+      @include respond(land) {
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      @include respond(sm-phone) {
+        gap: 1.5rem;
+      }
 
       &--apple,
       &--google {
@@ -77,20 +165,39 @@
         border-radius: 8px;
         margin-top: 3rem;
 
+        @include respond(land) {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        @include respond(sm-phone) {
+          border-radius: 4px;
+        }
+
         a {
           color: white;
           text-decoration: none;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding-top: 0.5rem;
-          padding-bottom: 0.5rem;
-          padding-left: 1rem;
-          padding-right: 1rem;
+          padding-top: 0.2rem;
+          padding-bottom: 0.2rem;
+          padding-left: 0.5rem;
+          padding-right: 0.9rem;
+
+          @include respond(sm-phone) {
+            padding-left: 0.2rem;
+            padding-right: 0.6rem;
+          }
 
           .fab {
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-right: 0.5rem;
+
+            @include respond(sm-phone) {
+              font-size: 1rem;
+              margin-right: 0.2rem;
+            }
           }
 
           .texts {
@@ -101,17 +208,34 @@
 
             p:nth-child(1) {
               font-size: 0.8rem;
+
+              @include respond(sm-phone) {
+                font-size: 0.5rem;
+              }
             }
 
             p:nth-child(2) {
-              font-size: 1.5rem;
+              font-size: 1.2rem;
               font-weight: bold;
+
+              @include respond(sm-phone) {
+                font-size: 0.7rem;
+              }
             }
           }
         }
       }
 
       &--google {
+        img {
+          width: 50px;
+          height: 50px;
+
+          @include respond(sm-phone) {
+            width: 25px;
+            height: 25px;
+          }
+        }
         .texts {
           p:nth-child(1) {
             align-self: flex-start;
@@ -124,41 +248,78 @@
 
 // About Viewed Game Section
 .viewed-game {
-  background-color: $white-color;
-  padding-top: 10rem;
-  padding-bottom: 5rem;
-  position: relative;
-  &__image {
-    @include absCenter;
-    top: 0%;
-    width: 15rem;
-    height: 15rem;
-    border-radius: 8px;
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
 
-    &-img {
+    @include respond(sm-phone) {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__images {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-around;
+
+    @include respond(sm-phone) {
+      gap: 1rem;
+    }
+
+    .imgs {
+      width: 20rem;
+      height: 13rem;
+
+      @include respond(land) {
+        width: 13rem;
+        height: 8rem;
+      }
+
+      @include respond(sm-phone) {
+        width: 10rem;
+        height: 5rem;
+      }
+    }
+
+    img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
       border-radius: 8px;
+      box-shadow: 2px 3px 15px #000;
     }
   }
 
   &__text {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 2rem auto;
 
-    &-title {
-      font-family: "Poppins", sans-serif;
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
+    @include respond(land) {
+      width: 90%;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    @include respond(sm-phone) {
+      width: 100%;
+      margin-top: 1rem;
     }
 
     &-name {
       letter-spacing: 0.03rem;
-      font-size: 2rem;
-    }
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
 
-    &-sub {
-      width: 80%;
-      margin: 1rem auto;
+      @include respond(sm-phone) {
+        font-size: 1rem;
+      }
     }
   }
 }

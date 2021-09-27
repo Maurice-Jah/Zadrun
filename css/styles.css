@@ -883,6 +883,12 @@ nav {
   background-image: url(../../images/img-07.jpg);
   background-size: cover;
   background-position: center center; }
+  @media only screen and (max-width: 62.5em) {
+    .viewGame {
+      min-height: 50vh; } }
+  @media only screen and (max-width: 32em) {
+    .viewGame {
+      min-height: 30vh; } }
 
 .download {
   display: -webkit-box;
@@ -890,21 +896,76 @@ nav {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-bottom: 12rem; }
+          justify-content: space-between; }
+  @media only screen and (max-width: 62.5em) {
+    .download {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+  @media only screen and (max-width: 32em) {
+    .download {
+      position: relative; } }
   .download__keepUp {
     width: 45%; }
+    @media only screen and (max-width: 62.5em) {
+      .download__keepUp {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        width: 100%; } }
     .download__keepUp-heading {
       font-size: 2rem;
       letter-spacing: 0.03rem;
       margin-bottom: 1rem;
       font-weight: bold;
       text-transform: uppercase; }
+      @media only screen and (max-width: 32em) {
+        .download__keepUp-heading {
+          text-transform: capitalize;
+          font-size: 1.2rem; } }
     .download__keepUp-info {
       font-size: 0.8rem;
       letter-spacing: 0.03rem;
       font-weight: bold;
       opacity: 0.5; }
+      @media only screen and (max-width: 32em) {
+        .download__keepUp-info {
+          font-size: 0.5rem;
+          letter-spacing: 0.03rem;
+          font-weight: bold;
+          font-style: italic;
+          text-transform: capitalize; } }
+    @media only screen and (max-width: 62.5em) {
+      .download__keepUp-smallDiv {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
+    @media only screen and (max-width: 32em) {
+      .download__keepUp-smallDiv {
+        position: absolute;
+        bottom: -10%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        width: 100%; } }
     .download__keepUp-socials {
       display: -webkit-inline-box;
       display: -ms-inline-flexbox;
@@ -914,6 +975,10 @@ nav {
               align-items: center;
       margin-top: 1rem;
       margin-bottom: 2rem; }
+      @media only screen and (max-width: 32em) {
+        .download__keepUp-socials {
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem; } }
       .download__keepUp-socials .fab {
         background: #676565;
         padding: 0.7rem;
@@ -924,6 +989,11 @@ nav {
         -webkit-transition: all 0.4s ease-in-out;
         -o-transition: all 0.4s ease-in-out;
         transition: all 0.4s ease-in-out; }
+        @media only screen and (max-width: 32em) {
+          .download__keepUp-socials .fab {
+            font-size: 0.6rem;
+            margin-right: 1rem;
+            padding: 0.5rem; } }
         .download__keepUp-socials .fab:hover {
           cursor: pointer;
           color: #af8888;
@@ -931,16 +1001,41 @@ nav {
       .download__keepUp-socials .facebook {
         padding: 0.7rem 0.9rem;
         margin-left: 1rem; }
+        @media only screen and (max-width: 32em) {
+          .download__keepUp-socials .facebook {
+            font-size: 0.6rem;
+            margin-left: 0.5rem;
+            padding: 0.5rem 0.6rem; } }
   .download__platforms {
     width: 45%; }
+    @media only screen and (max-width: 62.5em) {
+      .download__platforms {
+        width: 100%; } }
     .download__platforms-text {
       font-weight: bold;
       opacity: 0.7; }
+      @media only screen and (max-width: 32em) {
+        .download__platforms-text {
+          font-weight: normal;
+          font-size: 0.8rem;
+          margin-top: -1rem; } }
     .download__platforms-link {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      gap: 5rem; }
+      gap: 3rem; }
+      @media only screen and (max-width: 62.5em) {
+        .download__platforms-link {
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          gap: 2rem; } }
+      @media only screen and (max-width: 32em) {
+        .download__platforms-link {
+          gap: 1.5rem; } }
       .download__platforms-link--apple, .download__platforms-link--google {
         background: #000;
         display: -webkit-inline-box;
@@ -948,6 +1043,13 @@ nav {
         display: inline-flex;
         border-radius: 8px;
         margin-top: 3rem; }
+        @media only screen and (max-width: 62.5em) {
+          .download__platforms-link--apple, .download__platforms-link--google {
+            margin-top: 1rem;
+            margin-bottom: 1rem; } }
+        @media only screen and (max-width: 32em) {
+          .download__platforms-link--apple, .download__platforms-link--google {
+            border-radius: 4px; } }
         .download__platforms-link--apple a, .download__platforms-link--google a {
           color: white;
           text-decoration: none;
@@ -960,13 +1062,21 @@ nav {
           -webkit-box-pack: justify;
               -ms-flex-pack: justify;
                   justify-content: space-between;
-          padding-top: 0.5rem;
-          padding-bottom: 0.5rem;
-          padding-left: 1rem;
-          padding-right: 1rem; }
+          padding-top: 0.2rem;
+          padding-bottom: 0.2rem;
+          padding-left: 0.5rem;
+          padding-right: 0.9rem; }
+          @media only screen and (max-width: 32em) {
+            .download__platforms-link--apple a, .download__platforms-link--google a {
+              padding-left: 0.2rem;
+              padding-right: 0.6rem; } }
           .download__platforms-link--apple a .fab, .download__platforms-link--google a .fab {
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-right: 0.5rem; }
+            @media only screen and (max-width: 32em) {
+              .download__platforms-link--apple a .fab, .download__platforms-link--google a .fab {
+                font-size: 1rem;
+                margin-right: 0.2rem; } }
           .download__platforms-link--apple a .texts, .download__platforms-link--google a .texts {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -981,45 +1091,100 @@ nav {
             margin-left: 0.3rem; }
             .download__platforms-link--apple a .texts p:nth-child(1), .download__platforms-link--google a .texts p:nth-child(1) {
               font-size: 0.8rem; }
+              @media only screen and (max-width: 32em) {
+                .download__platforms-link--apple a .texts p:nth-child(1), .download__platforms-link--google a .texts p:nth-child(1) {
+                  font-size: 0.5rem; } }
             .download__platforms-link--apple a .texts p:nth-child(2), .download__platforms-link--google a .texts p:nth-child(2) {
-              font-size: 1.5rem;
+              font-size: 1.2rem;
               font-weight: bold; }
+              @media only screen and (max-width: 32em) {
+                .download__platforms-link--apple a .texts p:nth-child(2), .download__platforms-link--google a .texts p:nth-child(2) {
+                  font-size: 0.7rem; } }
+      .download__platforms-link--google img {
+        width: 50px;
+        height: 50px; }
+        @media only screen and (max-width: 32em) {
+          .download__platforms-link--google img {
+            width: 25px;
+            height: 25px; } }
       .download__platforms-link--google .texts p:nth-child(1) {
         -ms-flex-item-align: start;
             align-self: flex-start; }
 
-.viewed-game {
-  background-color: #fff;
-  padding-top: 10rem;
-  padding-bottom: 5rem;
-  position: relative; }
-  .viewed-game__image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    top: 0%;
-    width: 15rem;
-    height: 15rem;
-    border-radius: 8px; }
-    .viewed-game__image-img {
+.viewed-game__title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem; }
+  @media only screen and (max-width: 32em) {
+    .viewed-game__title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem; } }
+
+.viewed-game__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  @media only screen and (max-width: 32em) {
+    .viewed-game__images {
+      gap: 1rem; } }
+  .viewed-game__images .imgs {
+    width: 20rem;
+    height: 13rem; }
+    @media only screen and (max-width: 62.5em) {
+      .viewed-game__images .imgs {
+        width: 13rem;
+        height: 8rem; } }
+    @media only screen and (max-width: 32em) {
+      .viewed-game__images .imgs {
+        width: 10rem;
+        height: 5rem; } }
+  .viewed-game__images img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 8px;
+    -webkit-box-shadow: 2px 3px 15px #000;
+            box-shadow: 2px 3px 15px #000; }
+
+.viewed-game__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  margin: 2rem auto; }
+  @media only screen and (max-width: 62.5em) {
+    .viewed-game__text {
+      width: 90%;
+      text-align: justify;
+      -webkit-hyphens: auto;
+          -ms-hyphens: auto;
+              hyphens: auto; } }
+  @media only screen and (max-width: 32em) {
+    .viewed-game__text {
       width: 100%;
-      height: 100%;
-      border-radius: 8px; }
-  .viewed-game__text {
-    text-align: center; }
-    .viewed-game__text-title {
-      font-family: "Poppins", sans-serif;
-      font-size: 1.2rem;
-      margin-bottom: 1rem; }
-    .viewed-game__text-name {
-      letter-spacing: 0.03rem;
-      font-size: 2rem; }
-    .viewed-game__text-sub {
-      width: 80%;
-      margin: 1rem auto; }
+      margin-top: 1rem; } }
+  .viewed-game__text-name {
+    letter-spacing: 0.03rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem; }
+    @media only screen and (max-width: 32em) {
+      .viewed-game__text-name {
+        font-size: 1rem; } }
 
 .support {
   background-color: #fff; }
