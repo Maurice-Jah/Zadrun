@@ -90,32 +90,44 @@
 
       <!-- Support section -->
 
-      <section class="support">
-        <h1 class="support__heading">Need Help?</h1>
-        <div class="support__search">
-          <input
-            type="search"
-            class="support__search-input"
-            placeholder="Search...."
-          />
-          <i class="fab fa-search"></i>
-        </div>
-      </section>
+      <section class="faq">
+        <h1 class="faq__heading">FAQ</h1>
 
-      <section class="support-result">
-        <div class="support-result__game">
-          <div class="support-result__game-image">
-            <img
-              src="images/img-05.jpg"
-              alt="game-image"
-              class="support-result__game-image--img"
-            />
+        <div class="faq__faq">
+          <div class="faq__faq-question">
+            <h3 class="faq__faq-question--text">How do i use this code</h3>
+            <a
+              href="#answer1"
+              class="faq__faq-question--icon"
+              onclick="faqOpen()"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </a>
           </div>
-          <div class="support-result__game-select">
-            <select name="" class="support-result__game-select--search">
-              <option value="">Select your language</option>
-            </select>
+
+          <p class="faq__faq-answer" id="answer1">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad minima
+            nulla, tempore expedita libero explicabo quasi reprehenderit totam
+            ipsum voluptates!
+          </p>
+
+          <!-- question two -->
+          <div class="faq__faq-question">
+            <h3 class="faq__faq-question--text">How do i use this code</h3>
+            <a
+              href="#answer2"
+              class="faq__faq-question--icon"
+              onclick="faqOpen()"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </a>
           </div>
+
+          <p class="faq__faq-answer" id="answer2">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad minima
+            nulla, tempore expedita libero explicabo quasi reprehenderit totam
+            ipsum voluptates!
+          </p>
         </div>
       </section>
 
@@ -164,5 +176,7 @@
         <p class="footer__copyright">©2021 ZADRUN INC. ALL RIGHTS RESERVED</p>
       </section>
     </div>
+
+    <script src="js/support.js"></script>
   </body>
 </html>

@@ -5,7 +5,7 @@
   }
   &__search {
     width: 80%;
-    margin: 2rem auto;
+    margin: 1rem auto;
     &-input {
       width: 100%;
       padding: 1rem;
@@ -13,41 +13,53 @@
   }
 }
 
-// Results of search
-.support-result {
-  background-color: $white-color;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 5rem;
-  padding-bottom: 8rem;
-
-  &__game {
+// FAQ
+.faq {
+  &__heading {
     text-align: center;
+  }
 
-    &-image {
-      width: 15rem;
-      height: 15rem;
-      display: block;
-      margin-bottom: 1rem;
-      &--img {
-        width: 100%;
-        height: 100%;
+  &__faq {
+    width: 70%;
+    margin: 0 auto;
+
+    &-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+
+      &--icon {
+        padding: 0.6rem 0.8rem;
+        display: flex;
+        align-items: center;
+        background-color: $gray-color;
         border-radius: 8px;
+        transition: transform 2s ease-in-out;
+        color: $white-color;
+        text-decoration: none;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:hover > img {
+          transform: translateY(0.2rem);
+          cursor: pointer;
+        }
       }
     }
 
-    &-select {
-      margin-bottom: 1rem;
+    &-answer {
+      margin-top: 1rem;
+      // display: none;
+      overflow: hidden;
+      transition: all 0.5s ease-in-out;
+      height: 0;
+    }
 
-      &--search {
-        padding: 0.5rem;
-        border-radius: 2rem;
-
-        &:focus {
-          outline: none;
-        }
-      }
+    &-answer:target {
+      height: 50px;
     }
   }
 }
