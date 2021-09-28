@@ -27,7 +27,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 2rem;
+      margin-top: 1rem;
 
       &--icon {
         padding: 0.6rem 0.8rem;
@@ -37,29 +37,49 @@
         border-radius: 8px;
         transition: transform 2s ease-in-out;
         color: $white-color;
-        text-decoration: none;
+        position: relative;
 
         &:hover {
           cursor: pointer;
         }
 
-        &:hover > img {
-          transform: translateY(0.2rem);
+        &:hover > i {
+          transform: translateX(0.2rem);
           cursor: pointer;
         }
       }
     }
 
     &-answer {
-      margin-top: 1rem;
-      // display: none;
+      padding: 0 15px;
+      margin-top: 5px;
+      border-left: 1px solid $gray-color;
+      margin-left: 15px;
+      text-align: justify;
+      font-size: 14px;
       overflow: hidden;
+      max-height: 0px;
       transition: all 0.5s ease-in-out;
-      height: 0;
-    }
-
-    &-answer:target {
-      height: 50px;
     }
   }
+}
+
+.active .faq__faq-question--icon {
+  position: relative;
+  padding: 1rem 1.1rem;
+
+  .right {
+    display: none;
+  }
+}
+
+.active .faq__faq-question--icon::before {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  content: "\f078";
 }
