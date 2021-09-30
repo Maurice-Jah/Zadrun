@@ -34,14 +34,15 @@
     <title>Zadrun</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="main">
       <!-- Small header -->
-      <div class="header2">
-        <div class="header2__logo">
+      <div class="header1__container">
+        <div class="header1">
+          <!-- <div class="header2__logo">
           <a href="index.html"> Zadrun</a>
-         </div>
-     
-        <input type="checkbox" class="header2__checkbox" id="toggle" />
+        </div> -->
+
+          <!-- <input type="checkbox" class="header2__checkbox" id="toggle" />
 
         <label for="toggle" class="header2__toggle"> </label>
         <label class="header2__background" for="toggle" > </label>
@@ -58,13 +59,49 @@
           <li class="header2__list-link">
             <a href="support.html" class="header2__list-link--item">SUPPORT</a>
           </li>
-        </ul>
+        </ul> -->
+
+          <div class="header1__logo">
+            <a href="index.html"> Zaaaadrun</a>
+          </div>
+
+          <div
+            class="header1__open"
+            style="font-size: 30px; cursor: pointer"
+            onclick="openNav()"
+          >
+            &#9776;
+          </div>
+
+          <div class="header1__sidenav" id="mySidenav">
+            <ul class="header1__sidenav-list">
+              <li class="header1__sidenav-list--item">
+                <a
+                  href="javascript:void(0)"
+                  class="closebtn"
+                  onclick="closeNav()"
+                  >&times;</a
+                >
+              </li>
+              <li class="header1__sidenav-list--item"><a href="#">About</a></li>
+              <li class="header1__sidenav-list--item">
+                <a href="#">Services</a>
+              </li>
+              <li class="header1__sidenav-list--item">
+                <a href="#">Clients</a>
+              </li>
+              <li class="header1__sidenav-list--item">
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
       <!-- Ends here -->
       <header class="header">
-        <div class="header__logo">
+        <!-- <div class="header__logo">
           <a href="index.html"> Zadrun </a>
-        </div>
+        </div> -->
         <nav class="header__list">
           <li class="header__list-link">
             <a href="#" class="header__list-link--item">GAMES</a>
@@ -178,5 +215,17 @@
         <p class="footer__copyright">©2021 ZADRUN INC. ALL RIGHTS RESERVED</p>
       </section>
     </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.9)";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
   </body>
 </html>

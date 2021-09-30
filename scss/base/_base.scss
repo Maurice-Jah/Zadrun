@@ -38,10 +38,10 @@ section {
   }
 
   @include respond(phone) {
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
   }
 
   @include respond(sm-phone) {
-    padding: 3rem 2rem;
+    padding: 3rem 1.5rem;
   }
 }

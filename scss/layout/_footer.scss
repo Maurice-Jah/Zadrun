@@ -7,12 +7,20 @@
     &-name {
       font-size: 2rem;
       margin-bottom: 1rem;
+
+      @include respond(phone) {
+        font-size: 1rem;
+      }
     }
 
     &-sub {
       font-size: 1rem;
       letter-spacing: 0.04rem;
       margin-bottom: 1rem;
+
+      @include respond(phone) {
+        font-size: 0.8rem;
+      }
     }
   }
 
@@ -86,12 +94,16 @@
 
       @include respond(phone) {
         margin-right: 0rem;
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
     }
 
     &__media {
       margin-top: 1rem;
+
+      @include respond(phone) {
+        margin-top: 0.5rem;
+      }
       .fab {
         display: inline-block;
         background: $gray-color;
@@ -139,13 +151,13 @@
     }
 
     @include respond(phone) {
-      margin-left: -3rem;
-      margin-right: -3rem;
+      margin-left: -2rem;
+      margin-right: -2rem;
     }
 
     @include respond(sm-phone) {
-      margin-left: -2rem;
-      margin-right: -2rem;
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
     }
   }
 }
